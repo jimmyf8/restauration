@@ -170,5 +170,4 @@ décalage dans le temps. Ils pourront soit apparaître un par un, soit par group
 Cela fait apparaître une petite coche à droite du plat. 
 Cette coche devra coulisser dela droite vers la gauche. Pour cette première version, l’effet peut apparaître au survol
 sur desktop au lieu du clic. Si l’intitulé du plat est trop long, il devra être rogné avec
-des points de suspension. Un exemple de l’effet attendu est fourni.
-
+des points de suspension. Un exemple de l’effet attendu
