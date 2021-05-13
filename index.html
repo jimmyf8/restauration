@@ -20,39 +20,39 @@
                 </a>
             </div>
         </header>
-        <section><!--les restaurants-->
-            <form><!--champ de recherche-->
-                <div class="form">
-                  <label for="lieu"><i class="fas fa-map-marker-alt"></i></label>
-                  <input id="lieu" type="text" placeholder="Paris, Belleville" /><!--champs texte/ exemple-->
-                </div>
-            </form>
-        </section>
-        <section>
+        <section class="recherche/filtres">
+            <div class="recherche">
+                <form><!--champ de recherche-->
+                    <div class="form">
+                      <label for="lieu"><i class="fas fa-map-marker-alt"></i></label>
+                      <input id="lieu" type="text" placeholder="Paris, Belleville" /><!--champs texte/ exemple-->
+                    </div>
+                </form>
+            </div>
             <h1>Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <input type="button" value="Explorer nos restaurants">
-        </section>
-        <section>
-            <div class="filtres"><!--filtres-->
-                <h2>Fonctionnement</h2>
-                <ul class="filtres-list">
-                  <li class="filtres-list-item"><!--boutton filtre-->
-                     <div><i class=""></i></div><!--icône-->
-                     <span>Choisissez un restaurant</span>
-                  </li>
-                  <li class="filtres-list-item">
-                    <div><i class=""></i></div>
-                    <span>Composez votre menu</span>
-                  </li>
-                  <li class="filtres-list-item">
-                    <div><i class=""></i></div>
-                    <span>Dégustez au restaurant</span>
-                  </li>
-                </ul>
+            <div>
+                <button class="button button1">Explorer nos restaurants</button><!--bouton explorer-->
             </div>
+            <div class="filtres"><!--filtres-->
+                    <h2>Fonctionnement</h2>
+                    <ul class="filtres-list">
+                      <li class="filtres-list-item"><!--boutton filtre-->
+                         <div><i class=""></i></div><!--icône-->
+                         <span><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</span>
+                      </li>
+                      <li class="filtres-list-item">
+                        <div><i class=""></i></div>
+                        <span><i class="fas fa-ellipsis-v"></i><i class="fas fa-bars"></i>Composez votre menu</span>
+                      </li>
+                      <li class="filtres-list-item">
+                        <div><i class=""></i></div>
+                        <span><i class="fas fa-store"></i>Dégustez au restaurant</span>
+                      </li>
+                    </ul>
+                </div>
         </section>
-        <section>
+        <main>
             <h2>Restaurants</h2><!--les restaurants-->
             <div class="cards">
                 <a class="card" href="#"><!--carte-->
@@ -63,7 +63,7 @@
                     <div class="card-content"><!--description carte-->
                         <div>
                             <strong>La palette du goût</strong>
-                            <p>Ménilmontant</p>
+                            <p>Ménilmontant</p><p><i class="far fa-heart"></i></p>
                         </div>
                     </div>
                 </a> 
@@ -75,7 +75,7 @@
                     <div class="card-content"><!--description carte-->
                         <div>
                             <strong>La note enchantée</strong>
-                            <p>Charonne</p>
+                            <p>Charonne</p><p><i class="far fa-heart"></i></p>
                         </div>
                     </div>
                 </a>
@@ -87,7 +87,7 @@
                     <div class="card-content"><!--description carte-->
                         <div>
                             <strong>À la française</strong>
-                            <p>Cité Rouge</p>
+                            <p>Cité Rouge</p><p><i class="far fa-heart"></i></p>
                         </div>
                     </div>
                 </a>
@@ -99,12 +99,12 @@
                     <div class="card-content"><!--description carte-->
                         <div>
                             <strong>Le délice des sens</strong>
-                            <p>Folie-Méricourt</p>
+                            <p>Folie-Méricourt</p><p><i class="far fa-heart"></i></p>
                         </div>
                     </div>
                 </a>
             </div>      
-        </section>
+        </main>
         <footer><!--le pied de page-->
             <div class="footer">
                 <div class="logo">
@@ -114,8 +114,8 @@
                 </div>
                 <div>
                     <ul>
-                      <li><a href="#"><h3>Proposer un restaurant</h3></a></li>
-                      <li><a href="#"><h3>Devenir partenaire</h3></a></li>
+                      <li><a href="#"><h3><i class="fas fa-utensils"></i>Proposer un restaurant</h3></a></li>
+                      <li><a href="#"><h3><i class="fas fa-hands-helping"></i>Devenir partenaire</h3></a></li>
                       <li><a href="#"><h3>Mentions légales</h3></a></li>
                       <li><a href="#"><h3>Contact</h3></a></li>
                     </ul>
