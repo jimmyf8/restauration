@@ -4,7 +4,7 @@
   "description": "////////////////////////////# JimmyFarescourt_3_11052021/////////////////////////////////////",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass":"sass --watch .main.scss:./style.css"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jimmyf8/JimmyFarescourt_3_11052021/issues"
+    "url": "https://github.com/jimmyf8/JimmyFarescourt_3_11052021/"
   },
   "homepage": "https://github.com/jimmyf8/JimmyFarescourt_3_11052021#readme"
 }
