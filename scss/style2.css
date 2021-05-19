@@ -1,0 +1,119 @@
+/**********************
+COLOR
+**********************/
+/*primary color */
+/*secondary color*/
+/*tertiary color*/
+/*background_color*/
+/*text color*/
+/*link visited*/
+/*********************************
+UTILITAIRES POSITION / DIMENSIONS
+**********************************/
+/*police*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
+body {
+  font-family: "Roboto", "Shrikland";
+  color: black;
+}
+
+/**************************************
+ACCUEIL
+***************************************/
+body {
+  height: 100vh;
+  /*liens*/
+}
+body li {
+  list-style: none;
+}
+body li a {
+  text-decoration: none;
+}
+body li a-visited {
+  color: white;
+}
+
+/*****************************************
+version mobile
+******************************************/
+@media (max-width: 400px) {
+  main {
+    background-color: #eeeaea;
+  }
+
+  .card-content {
+    margin-bottom: 10px;
+    border-radius: 22px;
+    background-color: #fcfcfc;
+    border: solid white;
+    -webkit-box-shadow: 22px black;
+            box-shadow: 22px black;
+  }
+
+  /*pied de page*/
+  footer {
+    background-color: #3a3636;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .footer p {
+    color: white;
+    font-family: "Shrikland";
+  }
+  footer .footer p li {
+    list-style: none;
+  }
+  footer .footer p li a {
+    text-decoration: none;
+  }
+  footer .footer p li a-visited {
+    color: white;
+  }
+  footer h3 {
+    color: white;
+  }
+}
+/********************************************
+version tablettte
+*********************************************/
+@media (min-width: 401px) {
+  body {
+    background-color: #99E2D0;
+  }
+  body main {
+    /*boutton commander*/
+  }
+  body main .commander {
+    border-radius: 22px;
+    border: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#d88deb), to(#c074a7));
+    background: linear-gradient(#d88deb, #c074a7);
+    padding: 10px 0px 0px 0px;
+    color: white;
+    padding: 10px 10px 10px 10px;
+  }
+}
+/********************************************
+version desktop
+*********************************************/
+@media (min-width: 768px) {
+  body {
+    width: 1440px;
+    margin: auto;
+    background-color: #99E2D0;
+  }
+  body .footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #93e22b;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background-color: #3a3636;
+  }
+  body .footer ul li {
+    background: brown;
+  }
+}/*# sourceMappingURL=style2.css.map */

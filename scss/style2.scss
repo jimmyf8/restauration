@@ -1,0 +1,117 @@
+@import './_variables';
+@import './_mixins';
+@import './_placeholders';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap');
+
+/**************************************
+ACCUEIL
+***************************************/
+body{
+    height: 100vh;
+    @extend %flex-center;
+
+    /*liens*/
+    li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            &-visited{
+            color:$link_visited;
+            }
+        }
+    }
+
+    
+}
+
+
+
+
+/*****************************************
+version mobile
+******************************************/
+@media (max-width: 400px) {
+    main{
+     background-color: $backgroung_color;
+    }
+    
+    .card-content{
+        margin-bottom: 10px;
+        border-radius: 22px;
+        background-color: rgb(252, 252, 252);
+        border: solid rgb(255, 255, 255);
+        box-shadow: 22px black;
+        
+
+    }
+
+    
+    
+    /*pied de page*/
+    footer{
+    background-color: rgb(58, 54, 54);
+    justify-content: center;
+       .footer  p{
+        color: white;
+        font-family: 'Shrikland';
+           li{
+            list-style: none;
+               a{
+                text-decoration: none;
+                &-visited
+                {
+                color:$link_visited;
+                      }
+                   }
+               }
+           }
+
+           h3{
+              color:white;
+           }
+       }
+}
+
+/********************************************
+version tablettte
+*********************************************/
+@media (min-width: 401px){
+    body{
+        background-color: $tertiary_color;
+        main{
+            /*boutton commander*/
+            .commander{
+              border-radius: 22px;
+             border:none;
+             background: linear-gradient(#d88deb, rgb(192, 116, 167));
+             padding: 10px 0px 0px 0px;
+             color:white;
+             padding: 10px 10px 10px 10px;   
+            }
+        }
+    }
+
+}
+   
+/********************************************
+version desktop
+*********************************************/
+@media (min-width: 768px){
+    body{
+     width: 1440px;
+     margin: auto;
+     background-color: $tertiary_color;
+
+     .footer
+     ul{
+        display: flex;
+        color: rgb(147, 226, 43);
+        justify-content: space-around;
+        background-color: rgb(58, 54, 54);
+        li{
+            background: brown;
+        }
+    }
+    }
+}
