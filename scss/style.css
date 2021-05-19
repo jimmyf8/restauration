@@ -11,23 +11,32 @@ COLOR
 /*********************************
 UTILITAIRES POSITION / DIMENSIONS
 **********************************/
+/*police*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
 body {
   font-family: "Roboto", "Shrikland";
   color: black;
 }
 
+/**************************************
+ACCUEIL
+***************************************/
 body {
   height: 100vh;
+  /*boutton explorer*/
+  /*liens*/
 }
 body .logo {
   padding-left: 60px;
 }
 body .explorer {
   border-radius: 22px;
-  background-color: linear-gradient(#e66465, #9198e5);
+  border: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d88deb), to(#c074a7));
+  background: linear-gradient(#d88deb, #c074a7);
   padding: 10px 0px 0px 0px;
   color: white;
+  padding: 10px 10px 10px 10px;
 }
 body li {
   list-style: none;
@@ -39,112 +48,111 @@ body li a-visited {
   color: white;
 }
 
-.form {
-  border-width: 3px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 2rem;
-}
-
-.form label, .form button {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  cursor: pointer;
-  padding: 1px;
-}
-
-/*icône localistion*/
-label {
-  background-color: #dddbdb;
-}
-
-/* champs de texte*/
-input {
-  border: 0;
-  /* gras*/
-  font-weight: bold;
-  padding-left: 1rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  font-family: "Roboto";
-  background-color: #dddbdb;
-}
-
-/* Exemple de ville*/
-::-webkit-input-placeholder {
-  color: #000;
-  opacity: 1;
-}
-::-moz-placeholder {
-  color: #000;
-  opacity: 1;
-}
-:-ms-input-placeholder {
-  color: #000;
-  opacity: 1;
-}
-::-ms-input-placeholder {
-  color: #000;
-  opacity: 1;
-}
-::placeholder {
-  color: #000;
-  opacity: 1;
-}
-
-footer {
-  background-color: #3a3636;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-footer .footer p {
-  color: white;
-  font-family: "Shrikland";
-}
-footer .footer p li {
-  list-style: none;
-}
-footer .footer p li a {
-  text-decoration: none;
-}
-footer .footer p li a-visited {
-  color: white;
-}
-footer h3 {
-  color: white;
-}
-
-/*version mobile*/
+/*****************************************
+version mobile
+******************************************/
 @media (max-width: 400px) {
+  /*recherche*/
+  .form {
+    border-width: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2rem;
+  }
+
+  .form label, .form button {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    cursor: pointer;
+    padding: 1px;
+  }
+
+  /*icône localistion*/
+  label {
+    background-color: #dddbdb;
+  }
+
+  /* champs de texte*/
+  input {
+    border: 0;
+    /* gras*/
+    font-weight: bold;
+    padding-left: 1rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    font-family: "Roboto";
+    background-color: #dddbdb;
+  }
+
+  /* Exemple de ville*/
+  ::-webkit-input-placeholder {
+    color: #000;
+    opacity: 1;
+  }
+  ::-moz-placeholder {
+    color: #000;
+    opacity: 1;
+  }
+  :-ms-input-placeholder {
+    color: #000;
+    opacity: 1;
+  }
+  ::-ms-input-placeholder {
+    color: #000;
+    opacity: 1;
+  }
+  ::placeholder {
+    color: #000;
+    opacity: 1;
+  }
+
   .recherche-filtres {
     height: 500px;
-    width: 300px;
   }
   .recherche-filtres .form {
-    width: 300px;
+    width: 360px;
   }
-  .recherche-filtres .container {
+  .recherche-filtres .container1 {
     display: block;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 10px;
     background-color: #eeeaea;
+    width: 360px;
+    height: 250px;
   }
   .recherche-filtres h1 {
     font-size: bold;
   }
+  .recherche-filtres .container2 .filtres ul {
+    border: 2px;
+    border-radius: 2px;
+  }
+  .recherche-filtres .container2 .filtres ul li {
+    padding-bottom: 50px;
+    display: block;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    border: 2px;
+  }
+  .recherche-filtres .container2 .filtres ul li .icône {
+    background-color: yellowgreen;
+  }
 
+  /*************************************
+  version mobile
+  **************************************/
+}
+@media (max-width: 400px) and (max-width: 400px) {
   main {
     margin-bottom: 2rem;
   }
@@ -169,26 +177,119 @@ footer h3 {
     -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
+  main .cards .card2 {
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 22px;
+  }
+  main .cards .card2 img {
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    height: 200px;
+  }
   main .cards .container {
     padding: 0px 16px 5px 12px;
   }
   main .cards .Nouveau0 {
     position: relative;
-    bottom: 15rem;
-    left: 17rem;
+    bottom: 14rem;
+    left: 16rem;
     margin-top: 0px;
     background-color: #99E2D0;
     cursor: pointer;
+    border: none;
+  }
+  main .cards .Nouveau1 {
+    position: relative;
+    bottom: 12rem;
+    left: 16rem;
+    margin-top: 0px;
+    background-color: #99E2D0;
+    cursor: pointer;
+    border: none;
+  }
+
+  /*pied de page*/
+  footer {
+    background-color: #3a3636;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .footer p {
+    color: white;
+    font-family: "Shrikland";
+  }
+  footer .footer p li {
+    list-style: none;
+  }
+  footer .footer p li a {
+    text-decoration: none;
+  }
+  footer .footer p li a-visited {
+    color: white;
+  }
+  footer h3 {
+    color: white;
   }
 }
-.content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 200px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media (max-width: 400px) {
+  .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 200px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+/********************************************
+version tablettte
+*********************************************/
+@media (min-width: 401px) {
+  body {
+    background-color: #99E2D0;
+  }
+}
+/********************************************
+version desktop
+*********************************************/
+@media (min-width: 768px) {
+  body {
+    width: 1440px;
+    margin: auto;
+    background-color: #99E2D0;
+  }
+
+  header {
+    background-color: #9356DC;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .recherche-filtres {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #FF79DA;
+  }
+
+  .footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #93e22b;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background-color: #3a3636;
+  }
+  .footer ul li {
+    background: brown;
+  }
 }/*# sourceMappingURL=style.css.map */
