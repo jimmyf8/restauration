@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap');
 
 /**************************************
-ACCUEIL
+HOME, PAGE 2,3,4,5 LAYOUT & GENERAL
 ***************************************/
 body{
     height: 100vh;
@@ -13,15 +13,8 @@ body{
     .logo{
         padding-left: 60px;
     }
-    /*boutton explorer*/
-    .explorer{
-        border-radius: 22px;
-        border:none;
-        background: linear-gradient(#d88deb, rgb(192, 116, 167));
-        padding: 10px 0px 0px 0px;
-        color:white;
-        padding: 10px 10px 10px 10px;   
-    }
+    
+    
     /*liens*/
     li{
         list-style: none;
@@ -34,12 +27,12 @@ body{
     }
 }
 
+/*________________________________________
+mobile version home
+_________________________________________*/
 
-
-/*****************************************
-version mobile
-******************************************/
 @media (max-width: 400px) {
+   
     /*recherche*/
     .form {
     border-width: 3px;
@@ -86,10 +79,18 @@ version mobile
     .container1{
         display: block;
         align-items: center;
-
         background-color: $backgroung_color;
         width: 360px;
         height: 250px;
+        /*boutton explorer*/
+        .explorer{
+            border: none;
+            background: linear-gradient(0deg, rgb(214, 41, 230) 0%, rgb(166, 119, 204) 100%);
+            border-radius: 22px ;
+            padding: 10px 10px 10px 10px;   
+            color: white;
+        }
+        
     }
 
     h1{
@@ -97,32 +98,30 @@ version mobile
     }
 
     .container2{
-        
-        .filtres{
+        .filtres{  
             ul{
-                border: 2px;
-                
-                border-radius: 2px;
-                
                 li{
-                    
-                    padding-bottom: 50px;
+                    border: 2px;
+                    border-radius: 22px;
+                    background-color: rgb(238, 229, 229);
+                    padding: 20px;
+                    margin: 20px;
                     display: block;
                     justify-content: space-around;
-                    border:2px;
-                    
-                    .icône{
-                    background-color: yellowgreen;
-                    }
+                    .icônes{
+                        .filtres-list-item{
+                            color: blue;
+                        }
+                    } 
                 }
             }
         }
     }
 }
 
-/*************************************
-version mobile
-**************************************/
+/*_____________________________________
+ mobile version home
+ ____________________________________*/
 @media (max-width: 400px){
     main{
         margin-bottom: 2rem;
@@ -211,20 +210,22 @@ version mobile
      width: 200px;
      flex-wrap: wrap;
     }
-
 }
-/********************************************
-version tablettte
-*********************************************/
+
+/*___________________________________________
+tablet version home
+____________________________________________*/
+
 @media (min-width: 401px){
- body{
+   body{
      background-color: $tertiary_color;
- }
+    }
 }
 
-/********************************************
-version desktop
-*********************************************/
+/*___________________________________________
+desktop version home
+____________________________________________*/
+
 @media (min-width: 768px){
     body{
      width: 1440px;
@@ -245,7 +246,6 @@ version desktop
     .footer{
         ul{
             display: flex;
-            color: rgb(147, 226, 43);
             justify-content: space-around;
             background-color: rgb(58, 54, 54);
             li{
@@ -256,4 +256,114 @@ version desktop
     }
 
     
+}
+/*_________________________________________________________________________________________________*/
+/*_________________________________________________________________________________________________*/
+/*_________________________________________________________________________________________________*/
+/*_________________________________________________________________________________________________*/
+/*_________________________________________________________________________________________________*/
+/*_________________________________________________________________________________________________*/
+
+
+/*******************************************
+PAGE 2,3,4,5
+*******************************************/
+
+/*________________________________________
+mobile version page 2,3,4,5
+__________________________________________*/
+
+@media (max-width: 400px) {
+    .header2, .header3, .header4, .header5{
+        .image img{
+            height: 200px;
+            width: 390px;
+        }
+    }
+    .main2,.main3,.main4,.main5{
+     background-color: $backgroung_color;
+     .boutton01{
+         max-width: 300px;
+         max-height: 70px;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         border: none;
+         border-radius: 22px;
+         width: 370px;
+         margin: 20px ;
+         padding: 10px;
+         cursor: pointer;
+         background-color: rgb(255, 255, 255);
+        }
+    }
+    
+    /*pied de page*/
+    .footer2,.footer3,.footer4,.footer5{
+    background-color: rgb(58, 54, 54);
+    justify-content: center;
+    font-size: 15px;
+    .logo_footer img{
+        width: 100px;
+    }
+        li{
+        list-style: none;
+            a{
+             text-decoration: none;
+            }
+            h3{
+                color:rgb(252, 252, 252);
+        }   }
+    }
+}
+/*boutton explorer*/
+.Commander{
+    border: none;
+    background: linear-gradient(0deg, rgb(214, 41, 230) 0%, rgb(166, 119, 204) 100%);
+    border-radius: 22px ;
+    padding: 10px 10px 10px 10px;   
+    color: white;
+}
+/*___________________________________________
+tablet version page 2,3,4,5
+_____________________________________________*/
+
+@media (min-width: 401px){
+    body{
+        background-color: $tertiary_color;
+        main{
+            /*boutton commander*/
+            .commander{
+              border-radius: 22px;
+             border:none;
+             background: linear-gradient(#d88deb, rgb(192, 116, 167));
+             padding: 10px 0px 0px 0px;
+             color:white;
+             padding: 10px 10px 10px 10px;   
+            }
+        }
+    }
+
+}
+   
+/*___________________________________________
+desktop version  page 2,3,4,5
+_____________________________________________*/
+
+@media (min-width: 768px){
+    body{
+     width: 1440px;
+     margin: auto;
+     background-color: $tertiary_color;
+
+     .footer
+     ul{
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(58, 54, 54);
+        li{
+            background: rgb(255, 255, 255);
+        }
+    }
+    }
 }

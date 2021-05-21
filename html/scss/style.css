@@ -19,24 +19,14 @@ body {
 }
 
 /**************************************
-ACCUEIL
+HOME, PAGE 2,3,4,5 LAYOUT & GENERAL
 ***************************************/
 body {
   height: 100vh;
-  /*boutton explorer*/
   /*liens*/
 }
 body .logo {
   padding-left: 60px;
-}
-body .explorer {
-  border-radius: 22px;
-  border: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#d88deb), to(#c074a7));
-  background: linear-gradient(#d88deb, #c074a7);
-  padding: 10px 0px 0px 0px;
-  color: white;
-  padding: 10px 10px 10px 10px;
 }
 body li {
   list-style: none;
@@ -48,9 +38,9 @@ body li a-visited {
   color: white;
 }
 
-/*****************************************
-version mobile
-******************************************/
+/*________________________________________
+mobile version home
+_________________________________________*/
 @media (max-width: 400px) {
   /*recherche*/
   .form {
@@ -129,28 +119,36 @@ version mobile
     background-color: #eeeaea;
     width: 360px;
     height: 250px;
+    /*boutton explorer*/
+  }
+  .recherche-filtres .container1 .explorer {
+    border: none;
+    background: -webkit-gradient(linear, left bottom, left top, from(#d629e6), to(#a677cc));
+    background: linear-gradient(0deg, #d629e6 0%, #a677cc 100%);
+    border-radius: 22px;
+    padding: 10px 10px 10px 10px;
+    color: white;
   }
   .recherche-filtres h1 {
     font-size: bold;
   }
-  .recherche-filtres .container2 .filtres ul {
-    border: 2px;
-    border-radius: 2px;
-  }
   .recherche-filtres .container2 .filtres ul li {
-    padding-bottom: 50px;
+    border: 2px;
+    border-radius: 22px;
+    background-color: #eee5e5;
+    padding: 20px;
+    margin: 20px;
     display: block;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    border: 2px;
   }
-  .recherche-filtres .container2 .filtres ul li .icône {
-    background-color: yellowgreen;
+  .recherche-filtres .container2 .filtres ul li .icônes .filtres-list-item {
+    color: blue;
   }
 
-  /*************************************
-  version mobile
-  **************************************/
+  /*_____________________________________
+   mobile version home
+   ____________________________________*/
 }
 @media (max-width: 400px) and (max-width: 400px) {
   main {
@@ -248,17 +246,17 @@ version mobile
         flex-wrap: wrap;
   }
 }
-/********************************************
-version tablettte
-*********************************************/
+/*___________________________________________
+tablet version home
+____________________________________________*/
 @media (min-width: 401px) {
   body {
     background-color: #99E2D0;
   }
 }
-/********************************************
-version desktop
-*********************************************/
+/*___________________________________________
+desktop version home
+____________________________________________*/
 @media (min-width: 768px) {
   body {
     width: 1440px;
@@ -284,12 +282,124 @@ version desktop
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    color: #93e22b;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     background-color: #3a3636;
   }
   .footer ul li {
     background: brown;
+  }
+}
+/*_________________________________________________________________________________________________*/
+/*_________________________________________________________________________________________________*/
+/*_________________________________________________________________________________________________*/
+/*_________________________________________________________________________________________________*/
+/*_________________________________________________________________________________________________*/
+/*_________________________________________________________________________________________________*/
+/*******************************************
+PAGE 2,3,4,5
+*******************************************/
+/*________________________________________
+mobile version page 2,3,4,5
+__________________________________________*/
+@media (max-width: 400px) {
+  .header2 .image img, .header3 .image img, .header4 .image img, .header5 .image img {
+    height: 200px;
+    width: 390px;
+  }
+
+  .main2, .main3, .main4, .main5 {
+    background-color: #eeeaea;
+  }
+  .main2 .boutton01, .main3 .boutton01, .main4 .boutton01, .main5 .boutton01 {
+    max-width: 300px;
+    max-height: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border: none;
+    border-radius: 22px;
+    width: 370px;
+    margin: 20px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+  }
+
+  /*pied de page*/
+  .footer2, .footer3, .footer4, .footer5 {
+    background-color: #3a3636;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 15px;
+  }
+  .footer2 .logo_footer img, .footer3 .logo_footer img, .footer4 .logo_footer img, .footer5 .logo_footer img {
+    width: 100px;
+  }
+  .footer2 li, .footer3 li, .footer4 li, .footer5 li {
+    list-style: none;
+  }
+  .footer2 li a, .footer3 li a, .footer4 li a, .footer5 li a {
+    text-decoration: none;
+  }
+  .footer2 li h3, .footer3 li h3, .footer4 li h3, .footer5 li h3 {
+    color: #fcfcfc;
+  }
+}
+/*boutton explorer*/
+.Commander {
+  border: none;
+  background: -webkit-gradient(linear, left bottom, left top, from(#d629e6), to(#a677cc));
+  background: linear-gradient(0deg, #d629e6 0%, #a677cc 100%);
+  border-radius: 22px;
+  padding: 10px 10px 10px 10px;
+  color: white;
+}
+
+/*___________________________________________
+tablet version page 2,3,4,5
+_____________________________________________*/
+@media (min-width: 401px) {
+  body {
+    background-color: #99E2D0;
+  }
+  body main {
+    /*boutton commander*/
+  }
+  body main .commander {
+    border-radius: 22px;
+    border: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#d88deb), to(#c074a7));
+    background: linear-gradient(#d88deb, #c074a7);
+    padding: 10px 0px 0px 0px;
+    color: white;
+    padding: 10px 10px 10px 10px;
+  }
+}
+/*___________________________________________
+desktop version  page 2,3,4,5
+_____________________________________________*/
+@media (min-width: 768px) {
+  body {
+    width: 1440px;
+    margin: auto;
+    background-color: #99E2D0;
+  }
+  body .footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background-color: #3a3636;
+  }
+  body .footer ul li {
+    background: white;
   }
 }/*# sourceMappingURL=style.css.map */
