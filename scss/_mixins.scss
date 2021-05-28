@@ -1,0 +1,17 @@
+/*_________________________________
+Position
+___________________________________/
+
+/*padding*/
+@mixin padding{
+padding: 10px 10px 10px 10px;}
+
+/*margin*/
+@mixin margin{
+margin: 10px 10px 10px 10px;}
+
+@mixin flexMid{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
