@@ -4,3 +4,9 @@
     color: $text_color; 
 }
 
+/*border-top*/
+%flex-border-top{
+ border-top-left-radius: 22px;
+ border-top-right-radius:  22px;
+}
+
