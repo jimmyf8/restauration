@@ -5,12 +5,27 @@ COLOR
 /*primary color */
 /*secondary color*/
 /*tertiary color*/
-/*background_color*/
+/*         background      */
+/*background_color recherche*/
+/*background_color container1 mobile*/
+/*background_filtres*/
+/*background_explorer desktop*/
+/*background_explorer mobile*/
+/*           texte          */
 /*text color*/
 /*link visited*/
 /*********************************
 UTILITAIRES POSITION / DIMENSIONS
 **********************************/
+/*radius bouton*/
+/*padding texte*/
+/*border radius*/
+/*_________________________________
+Position
+___________________________________/
+
+/*padding*/
+/*margin*/
 /*police*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
 body {
@@ -18,6 +33,7 @@ body {
   color: black;
 }
 
+/*border-top*/
 /**************************************
 HOME, PAGE 2,3,4,5 LAYOUT & GENERAL
 ***************************************/
@@ -28,20 +44,24 @@ body {
 body .logo {
   padding-left: 60px;
 }
+body h3 .title4 {
+  display: none;
+}
 body li {
   list-style: none;
 }
 body li a {
+  color: white;
   text-decoration: none;
 }
 body li a-visited {
-  color: white;
+  color: #c4c596;
 }
 
 /*________________________________________
-mobile version home
+mobile version home 1
 _________________________________________*/
-@media (max-width: 400px) {
+@media (max-width: 426px) {
   /*recherche*/
   .form {
     border-width: 3px;
@@ -49,6 +69,7 @@ _________________________________________*/
     display: -ms-flexbox;
     display: flex;
     height: 2rem;
+    border-top: 2px solid rgba(218, 218, 218, 0.938);
   }
 
   .form label, .form button {
@@ -67,7 +88,7 @@ _________________________________________*/
 
   /*icône localistion*/
   label {
-    background-color: #dddbdb;
+    background-color: #eeeaea;
   }
 
   /* champs de texte*/
@@ -80,44 +101,52 @@ _________________________________________*/
         -ms-flex: 1;
             flex: 1;
     font-family: "Roboto";
-    background-color: #dddbdb;
+    background-color: #eeeaea;
+    -webkit-box-shadow: 50 80px 16px 80 rgba(7, 0, 8, 0.2);
+            box-shadow: 50 80px 16px 80 rgba(7, 0, 8, 0.2);
   }
 
   /* Exemple de ville*/
   ::-webkit-input-placeholder {
-    color: #000;
+    color: #030303;
     opacity: 1;
+    text-align: center;
   }
   ::-moz-placeholder {
-    color: #000;
+    color: #030303;
     opacity: 1;
+    text-align: center;
   }
   :-ms-input-placeholder {
-    color: #000;
+    color: #030303;
     opacity: 1;
+    text-align: center;
   }
   ::-ms-input-placeholder {
-    color: #000;
+    color: #030303;
     opacity: 1;
+    text-align: center;
   }
   ::placeholder {
-    color: #000;
+    color: #030303;
     opacity: 1;
+    text-align: center;
   }
 
   .recherche-filtres {
     height: 500px;
   }
   .recherche-filtres .form {
-    width: 360px;
+    min-width: 310px;
   }
   .recherche-filtres .container1 {
     display: block;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: #eeeaea;
-    width: 360px;
+    text-align: center;
+    background-color: #f3f2f2;
+    min-width: 310px;
     height: 250px;
     /*boutton explorer*/
   }
@@ -128,85 +157,157 @@ _________________________________________*/
     border-radius: 22px;
     padding: 10px 10px 10px 10px;
     color: white;
+    -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  .recherche-filtres .container1 .explorer:hover {
+    background: #bf71d8;
+    -webkit-box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
   }
   .recherche-filtres h1 {
     font-size: large;
   }
   .recherche-filtres .container2 .filtres ul li {
-    border: 2px;
+    -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    width: 250px;
+    max-height: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border: none;
     border-radius: 22px;
-    background-color: #eee5e5;
-    padding: 20px;
     margin: 20px;
-    display: block;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    padding: 0px;
+    cursor: pointer;
+    background-color: whitesmoke;
   }
-  .recherche-filtres .container2 .filtres ul li .icônes .filtres-list-item {
-    color: blue;
+  .recherche-filtres .container2 .filtres ul li:hover {
+    -webkit-box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  .recherche-filtres .container2 .filtres ul li div .icone {
+    color: #ffffff;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #9356DC;
+    border-radius: 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Hauteur des icônes*/
+    height: calc(100% + 0.9rem);
+    /* Centrer les icônes horizontalement*/
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 1.2rem;
+  }
+  .recherche-filtres .container2 .filtres ul li span {
+    width: 210px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+    right: 8px;
+    font-family: "Shrikland";
+  }
+  .recherche-filtres .container2 .filtres ul li span i {
+    color: #999999;
+  }
+  .recherche-filtres .container2 .filtres ul li span i:hover {
+    color: #9356DC;
   }
 
   /*_____________________________________
-   mobile version home
+   mobile version home 2
    ____________________________________*/
 }
-@media (max-width: 400px) and (max-width: 400px) {
-  main {
-    margin-bottom: 2rem;
+@media (max-width: 426px) and (max-width: 426px) {
+  .main1 {
+    margin-top: 90px;
+    margin-bottom: 4rem;
   }
-  main .cards {
-    margin: 10px;
-    /* On mouse-over, add a deeper shadow */
+  .main1 .cards {
+    background-color: transparent;
     /* Add some padding inside the card container */
   }
-  main .cards .card {
+  .main1 .cards .card {
     /* Add shadows to create the "card" effect */
     -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
             box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
     -webkit-transition: 0.3s;
     transition: 0.3s;
     border-radius: 22px;
+    margin: 0px 0px 40px 0px;
+    height: 220px;
   }
-  main .cards .card img {
+  .main1 .cards .card:hover {
+    -webkit-box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  .main1 .cards .card img {
     border-top-left-radius: 22px;
-    border-top-right-radius: 22px;
+    border-radius: 22px;
+    height: 150px;
   }
-  main .cards .card:hover {
-    -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  }
-  main .cards .card2 {
+  .main1 .cards .card2 {
     -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
             box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
     -webkit-transition: 0.3s;
     transition: 0.3s;
     border-radius: 22px;
   }
-  main .cards .card2 img {
+  .main1 .cards .card2 img {
     border-top-left-radius: 22px;
     border-top-right-radius: 22px;
-    height: 200px;
   }
-  main .cards .container {
+  .main1 .cards .container {
     padding: 0px 16px 5px 12px;
   }
-  main .cards .Nouveau0 {
+  .main1 .cards .container div {
+    height: 0px;
+  }
+  .main1 .cards .container div h4 {
+    margin: 0px;
+  }
+  .main1 .cards .Nouveau0 {
     position: relative;
-    bottom: 14rem;
-    left: 16rem;
-    margin-top: 0px;
+    bottom: 8rem;
+    left: 13rem;
+    padding: 0px 10px 0px 10px;
     background-color: #99E2D0;
     cursor: pointer;
     border: none;
   }
-  main .cards .Nouveau1 {
+  .main1 .cards .Nouveau0 p {
+    color: #35d1aa;
+  }
+  .main1 .cards .content {
+    min-width: 200px;
+    padding-left: 10px;
+  }
+  .main1 .cards .Nouveau1 {
     position: relative;
-    bottom: 12rem;
-    left: 16rem;
-    margin-top: 0px;
+    bottom: 8rem;
+    left: 13rem;
+    padding: 0px 10px 0px 10px;
     background-color: #99E2D0;
     cursor: pointer;
     border: none;
+  }
+  .main1 .cards .Nouveau1 p {
+    color: #35d195;
   }
 
   /*pied de page*/
@@ -233,7 +334,7 @@ _________________________________________*/
     color: white;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 426px) {
   .content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -246,12 +347,233 @@ _________________________________________*/
         flex-wrap: wrap;
   }
 }
+/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 427px et 767px */
+@media all and (min-width: 427px) and (max-width: 767px) {
+  /*recherche*/
+  .form {
+    border-width: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2rem;
+  }
+
+  .form label, .form button {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    cursor: pointer;
+    padding: 1px;
+  }
+
+  /*icône localistion*/
+  label {
+    background-color: #FF79DA;
+  }
+
+  /* champs de texte*/
+  input {
+    border: 0;
+    /* gras*/
+    font-weight: bold;
+    padding-left: 1rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    font-family: "Roboto";
+    background-color: #dddbdb;
+  }
+
+  /* Exemple de ville*/
+  ::-webkit-input-placeholder {
+    color: #000;
+    opacity: 1;
+    text-align: center;
+  }
+  ::-moz-placeholder {
+    color: #000;
+    opacity: 1;
+    text-align: center;
+  }
+  :-ms-input-placeholder {
+    color: #000;
+    opacity: 1;
+    text-align: center;
+  }
+  ::-ms-input-placeholder {
+    color: #000;
+    opacity: 1;
+    text-align: center;
+  }
+  ::placeholder {
+    color: #000;
+    opacity: 1;
+    text-align: center;
+  }
+
+  .recherche-filtres {
+    height: 500px;
+  }
+  .recherche-filtres .form {
+    min-width: 310px;
+  }
+
+  h2 {
+    color: #9356DC;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 56px;
+  }
+
+  div.content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 600px;
+  }
+
+  p {
+    color: #9356DC;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 26px;
+  }
+
+  h4 {
+    font-family: "Shrikland";
+    font-size: 26px;
+  }
+
+  .cards .card img {
+    border-radius: 22px;
+  }
+
+  .Nouveau0 {
+    position: relative;
+    bottom: 28rem;
+    left: 35rem;
+    padding: 0px 10px 0px 10px;
+    background-color: #99E2D0;
+    cursor: pointer;
+    border: none;
+  }
+  .Nouveau0 p {
+    color: white;
+  }
+
+  .Nouveau1 {
+    position: relative;
+    bottom: 52rem;
+    left: 35rem;
+    padding: 0px 10px 0px 10px;
+    background-color: #99E2D0;
+    cursor: pointer;
+    border: none;
+  }
+  .Nouveau1 p {
+    color: white;
+  }
+
+  .footer ul {
+    background-color: #888080;
+  }
+  .footer ul p {
+    font-family: "Shrikland";
+    font-size: 26px;
+    color: #FF79DA;
+  }
+  .footer ul h3 {
+    color: #fdfdfd;
+  }
+}
 /*___________________________________________
 tablet version home
 ____________________________________________*/
-@media (min-width: 401px) {
+@media (min-width: 768px) {
   body {
-    background-color: #99E2D0;
+    width: 1440px;
+    margin: auto;
+    background-color: red;
+  }
+  body .main1 {
+    height: 900px;
+  }
+  body button.explorer {
+    /*boutton explorer*/
+    border: none;
+    background: -webkit-gradient(linear, left bottom, left top, from(#7b8dc9), to(#7bc3e4));
+    background: linear-gradient(0deg, #7b8dc9 0%, #7bc3e4 100%);
+    border-radius: 22px;
+    padding: 10px 10px 10px 10px;
+    color: white;
+    width: 600px;
+  }
+  body .cards {
+    max-width: 1500px;
+    max-height: 900px;
+    padding: 100px 0px 1px 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .cards .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 1200px;
+  }
+  body .cards .card {
+    /* Add shadows to create the "card" effect */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-shadow: 0 4px 5px 0 #99E2D0;
+            box-shadow: 0 4px 5px 0 #99E2D0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 22px;
+    max-width: 600px;
+    max-height: 252px;
+    margin-top: 100px;
+    background-color: white;
+    margin-right: 10px;
+    /* On mouse-over, add a deeper shadow */
+  }
+  body .cards .card img {
+    width: 100px;
+    height: 250px;
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
+    padding-right: 10px;
+  }
+  body .cards .card .card2 {
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 22px;
+    width: 100px;
+  }
+  body .cards .card .card2 .card2 img {
+    border-top-left-radius: 22px;
+    width: 20px;
   }
 }
 /*___________________________________________
@@ -259,35 +581,206 @@ desktop version home
 ____________________________________________*/
 @media (min-width: 768px) {
   body {
-    width: 1440px;
+    max-width: 1440px;
     margin: auto;
-    background-color: #99E2D0;
+    /*fonctionnement*/
+  }
+  body .h1_index {
+    color: #99E2D0;
+    font-size: 78px;
+  }
+  body .h2_index {
+    height: 50px;
+    width: 1200px;
+    font-size: 35px;
+    color: white;
+  }
+  body .fx {
+    color: white;
+    padding: 20px;
+    height: 0px;
+    font-size: 60px;
+    font-family: roboto;
+  }
+  body .fx:hover {
+    color: #5fa097;
+  }
+  body .resto {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: white;
+    font-size: 200px;
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  body .resto:hover {
+    -webkit-transition: 2s;
+    transition: 2s;
+    -webkit-transform: rotate(0.9deg);
+            transform: rotate(0.9deg);
+    color: lightsalmon;
+  }
+  body button.explorer {
+    height: 100px;
+    font-size: 36px;
+  }
+  body div.filtres {
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 35px;
+  }
+  body .main1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: row;
+        flex-wrap: row;
+    width: 1440px;
+    height: 1600px;
   }
 
   header {
-    background-color: #9356DC;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 1440px;
+    margin: 10px;
+  }
+  header img {
+    background-color: white;
+    border-radius: 22px;
+    padding: 10px;
   }
 
   .recherche-filtres {
+    max-width: 1440px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #FF79DA;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .recherche-filtres ul.filtres-list {
+    width: 1500px;
+    padding: 10px 10px 10px 10px;
+    font-size: 40px;
+  }
+  .recherche-filtres ul.filtres-list :hover {
+    color: #54b8ca;
+  }
+  .recherche-filtres ul.filtres-list li {
+    width: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px 10px 10px 10px;
+    color: #ea06ff;
+    font-family: "Arial Narrow Bold", sans-serif;
+  }
+  .recherche-filtres ul.filtres-list li p:hover {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transition: 2s;
+    transition: 2s;
   }
 
-  .footer ul {
+  .cards {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 1300px;
+  }
+  .cards .card {
+    /* Add shadows to create the "card" effect */
+    -webkit-box-shadow: 0 4px 5px 0 rgba(255, 28, 28, 0.2);
+            box-shadow: 0 4px 5px 0 rgba(255, 28, 28, 0.2);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 22px;
+    max-width: 1000px;
+    background-color: #b40f0f;
+    /* On mouse-over, add a deeper shadow */
+  }
+  .cards .card img {
+    height: 10px;
+    width: 700px;
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
+  }
+  .cards .card.card:hover {
+    -webkit-box-shadow: 0 8px 16px 0 rgba(255, 0, 0, 0.2);
+            box-shadow: 0 8px 16px 0 rgba(255, 0, 0, 0.2);
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  .cards .card .card2 {
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 22px;
+    width: 1000px;
+  }
+  .cards .card .card2 .card2 img {
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    height: 110px;
+    width: 700px;
+  }
+  .cards .card div.content {
+    width: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cards .card h4 {
+    padding: 20px;
+    font-size: 26px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  .cards .card .content p {
+    font-family: cursive;
+    font-size: 25px;
+  }
+  .cards .card .Nouveau0 {
+    margin: 10px;
+    background-color: #9356DC;
+  }
+  .cards .card .Nouveau0 p {
+    font-size: 26px;
+    color: white;
+  }
+  .cards .card .Nouveau1 {
+    margin: 10px;
+    background-color: #9356DC;
+  }
+  .cards .card .Nouveau1 p {
+    font-size: 26px;
+    color: white;
+  }
+
+  .footer img {
+    color: violet;
+  }
+  .footer ul {
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    background-color: #3a3636;
   }
   .footer ul li {
-    background: brown;
+    background: transparent;
+    font-size: 30px;
   }
 }
 /*_________________________________________________________________________________________________*/
@@ -309,7 +802,17 @@ __________________________________________*/
   }
 
   .main2, .main3, .main4, .main5 {
-    background-color: #eeeaea;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    background-color: lightgray;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 390px;
   }
   .main2 .boutton01, .main3 .boutton01, .main4 .boutton01, .main5 .boutton01 {
     max-width: 300px;
@@ -329,6 +832,12 @@ __________________________________________*/
     padding: 10px;
     cursor: pointer;
     background-color: white;
+    -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  .main2 .boutton01:hover, .main3 .boutton01:hover, .main4 .boutton01:hover, .main5 .boutton01:hover {
+    -webkit-box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
   }
 
   /*pied de page*/
@@ -338,6 +847,7 @@ __________________________________________*/
         -ms-flex-pack: center;
             justify-content: center;
     font-size: 15px;
+    width: 390px;
   }
   .footer2 .logo_footer img, .footer3 .logo_footer img, .footer4 .logo_footer img, .footer5 .logo_footer img {
     width: 100px;
@@ -349,17 +859,20 @@ __________________________________________*/
     text-decoration: none;
   }
   .footer2 li h3, .footer3 li h3, .footer4 li h3, .footer5 li h3 {
-    color: #fcfcfc;
+    color: white;
   }
 }
 /*boutton explorer*/
 .Commander {
   border: none;
-  background: -webkit-gradient(linear, left bottom, left top, from(#d629e6), to(#a677cc));
-  background: linear-gradient(0deg, #d629e6 0%, #a677cc 100%);
   border-radius: 22px;
   padding: 10px 10px 10px 10px;
-  color: white;
+  color: #a71616;
+  cursor: pointer;
+}
+.Commander:hover {
+  -webkit-box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 /*___________________________________________
@@ -367,18 +880,17 @@ tablet version page 2,3,4,5
 _____________________________________________*/
 @media (min-width: 401px) {
   body {
-    background-color: #99E2D0;
-  }
-  body main {
-    /*boutton commander*/
+    background-color: white;
   }
   body main .commander {
+    -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     border-radius: 22px;
     border: none;
     background: -webkit-gradient(linear, left top, left bottom, from(#d88deb), to(#c074a7));
     background: linear-gradient(#d88deb, #c074a7);
-    padding: 10px 0px 0px 0px;
-    color: white;
+    padding: 10px 10px 10px 10px;
+    color: #d61616;
     padding: 10px 10px 10px 10px;
   }
 }
@@ -389,17 +901,147 @@ _____________________________________________*/
   body {
     width: 1440px;
     margin: auto;
-    background-color: #99E2D0;
+    background-color: white;
   }
-  body .footer ul {
+  body .header2, body .header3, body .header4, body .header5 {
+    background-color: transparent;
+    width: 1430px;
+    height: 100px;
+    padding-bottom: 10px 10px;
+  }
+  body .header2 .image img, body .header3 .image img, body .header4 .image img, body .header5 .image img {
+    width: 25%;
+    position: relative;
+    top: 100px;
+    right: 210px;
+    border: 10px solid white;
+  }
+  body .header2 .image5 img, body .header3 .image5 img, body .header4 .image5 img, body .header5 .image5 img {
+    width: 25%;
+    position: relative;
+    top: 100px;
+    right: 390px;
+    border: 10px solid white;
+  }
+  body main.main5, body main.main4, body main.main3, body main.main2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: wrap;
+            flex-direction: wrap;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    margin-left: 100px;
+  }
+  body main.main5 .title2, body main.main5 .title3, body main.main5 .title4, body main.main5 .title5, body main.main4 .title2, body main.main4 .title3, body main.main4 .title4, body main.main4 .title5, body main.main3 .title2, body main.main3 .title3, body main.main3 .title4, body main.main3 .title5, body main.main2 .title2, body main.main2 .title3, body main.main2 .title4, body main.main2 .title5 {
+    width: 90px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 26px;
+    position: relative;
+    top: 100px;
+  }
+  body main.main5 .title2 :hover, body main.main5 .title3 :hover, body main.main5 .title4 :hover, body main.main5 .title5 :hover, body main.main4 .title2 :hover, body main.main4 .title3 :hover, body main.main4 .title4 :hover, body main.main4 .title5 :hover, body main.main3 .title2 :hover, body main.main3 .title3 :hover, body main.main3 .title4 :hover, body main.main3 .title5 :hover, body main.main2 .title2 :hover, body main.main2 .title3 :hover, body main.main2 .title4 :hover, body main.main2 .title5 :hover {
+    color: #8cd9f0;
+  }
+  body main.main5 .entrée2, body main.main5 .entrée3, body main.main5 .entrée4, body main.main5 .entrée5, body main.main4 .entrée2, body main.main4 .entrée3, body main.main4 .entrée4, body main.main4 .entrée5, body main.main3 .entrée2, body main.main3 .entrée3, body main.main3 .entrée4, body main.main3 .entrée5, body main.main2 .entrée2, body main.main2 .entrée3, body main.main2 .entrée4, body main.main2 .entrée5 {
+    background-color: white;
+    border-radius: 22px;
+    margin: 10px 10px 10px 210px;
+    padding: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    width: 100%;
+  }
+  body main.main5 .entrée2 .boutton01, body main.main5 .entrée3 .boutton01, body main.main5 .entrée4 .boutton01, body main.main5 .entrée5 .boutton01, body main.main4 .entrée2 .boutton01, body main.main4 .entrée3 .boutton01, body main.main4 .entrée4 .boutton01, body main.main4 .entrée5 .boutton01, body main.main3 .entrée2 .boutton01, body main.main3 .entrée3 .boutton01, body main.main3 .entrée4 .boutton01, body main.main3 .entrée5 .boutton01, body main.main2 .entrée2 .boutton01, body main.main2 .entrée3 .boutton01, body main.main2 .entrée4 .boutton01, body main.main2 .entrée5 .boutton01 {
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 22px;
+  }
+  body main.main5 .entrée2 .boutton01 :hover, body main.main5 .entrée3 .boutton01 :hover, body main.main5 .entrée4 .boutton01 :hover, body main.main5 .entrée5 .boutton01 :hover, body main.main4 .entrée2 .boutton01 :hover, body main.main4 .entrée3 .boutton01 :hover, body main.main4 .entrée4 .boutton01 :hover, body main.main4 .entrée5 .boutton01 :hover, body main.main3 .entrée2 .boutton01 :hover, body main.main3 .entrée3 .boutton01 :hover, body main.main3 .entrée4 .boutton01 :hover, body main.main3 .entrée5 .boutton01 :hover, body main.main2 .entrée2 .boutton01 :hover, body main.main2 .entrée3 .boutton01 :hover, body main.main2 .entrée4 .boutton01 :hover, body main.main2 .entrée5 .boutton01 :hover {
+    color: #3676aa;
+  }
+  body main.main5 .plats2, body main.main5 .plats3, body main.main5 .plats4, body main.main5 .plats5, body main.main4 .plats2, body main.main4 .plats3, body main.main4 .plats4, body main.main4 .plats5, body main.main3 .plats2, body main.main3 .plats3, body main.main3 .plats4, body main.main3 .plats5, body main.main2 .plats2, body main.main2 .plats3, body main.main2 .plats4, body main.main2 .plats5 {
+    background-color: white;
+    border-radius: 22px;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 22px;
+    width: 100%;
+  }
+  body main.main5 .plats2 .boutton01, body main.main5 .plats3 .boutton01, body main.main5 .plats4 .boutton01, body main.main5 .plats5 .boutton01, body main.main4 .plats2 .boutton01, body main.main4 .plats3 .boutton01, body main.main4 .plats4 .boutton01, body main.main4 .plats5 .boutton01, body main.main3 .plats2 .boutton01, body main.main3 .plats3 .boutton01, body main.main3 .plats4 .boutton01, body main.main3 .plats5 .boutton01, body main.main2 .plats2 .boutton01, body main.main2 .plats3 .boutton01, body main.main2 .plats4 .boutton01, body main.main2 .plats5 .boutton01 {
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 22px;
+  }
+  body main.main5 .plats2 .boutton01 :hover, body main.main5 .plats3 .boutton01 :hover, body main.main5 .plats4 .boutton01 :hover, body main.main5 .plats5 .boutton01 :hover, body main.main4 .plats2 .boutton01 :hover, body main.main4 .plats3 .boutton01 :hover, body main.main4 .plats4 .boutton01 :hover, body main.main4 .plats5 .boutton01 :hover, body main.main3 .plats2 .boutton01 :hover, body main.main3 .plats3 .boutton01 :hover, body main.main3 .plats4 .boutton01 :hover, body main.main3 .plats5 .boutton01 :hover, body main.main2 .plats2 .boutton01 :hover, body main.main2 .plats3 .boutton01 :hover, body main.main2 .plats4 .boutton01 :hover, body main.main2 .plats5 .boutton01 :hover {
+    color: #3676aa;
+  }
+  body main.main5 .dessert2, body main.main5 .dessert3, body main.main5 .dessert4, body main.main5 .dessert5, body main.main4 .dessert2, body main.main4 .dessert3, body main.main4 .dessert4, body main.main4 .dessert5, body main.main3 .dessert2, body main.main3 .dessert3, body main.main3 .dessert4, body main.main3 .dessert5, body main.main2 .dessert2, body main.main2 .dessert3, body main.main2 .dessert4, body main.main2 .dessert5 {
+    background-color: white;
+    border-radius: 22px;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 22px;
+    width: 100%;
+  }
+  body main.main5 .dessert2 .boutton01, body main.main5 .dessert3 .boutton01, body main.main5 .dessert4 .boutton01, body main.main5 .dessert5 .boutton01, body main.main4 .dessert2 .boutton01, body main.main4 .dessert3 .boutton01, body main.main4 .dessert4 .boutton01, body main.main4 .dessert5 .boutton01, body main.main3 .dessert2 .boutton01, body main.main3 .dessert3 .boutton01, body main.main3 .dessert4 .boutton01, body main.main3 .dessert5 .boutton01, body main.main2 .dessert2 .boutton01, body main.main2 .dessert3 .boutton01, body main.main2 .dessert4 .boutton01, body main.main2 .dessert5 .boutton01 {
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 22px;
+  }
+  body main.main5 .dessert2 .boutton01 :hover, body main.main5 .dessert3 .boutton01 :hover, body main.main5 .dessert4 .boutton01 :hover, body main.main5 .dessert5 .boutton01 :hover, body main.main4 .dessert2 .boutton01 :hover, body main.main4 .dessert3 .boutton01 :hover, body main.main4 .dessert4 .boutton01 :hover, body main.main4 .dessert5 .boutton01 :hover, body main.main3 .dessert2 .boutton01 :hover, body main.main3 .dessert3 .boutton01 :hover, body main.main3 .dessert4 .boutton01 :hover, body main.main3 .dessert5 .boutton01 :hover, body main.main2 .dessert2 .boutton01 :hover, body main.main2 .dessert3 .boutton01 :hover, body main.main2 .dessert4 .boutton01 :hover, body main.main2 .dessert5 .boutton01 :hover {
+    color: #3676aa;
+  }
+  body main.main5 .Commander, body main.main4 .Commander, body main.main3 .Commander, body main.main2 .Commander {
+    width: 400px;
+    position: relative;
+    top: 600px;
+    right: 500px;
+  }
+  body .footer2, body .footer3, body .footer4, body .footer5, body ul {
+    width: 1440px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    background-color: #3a3636;
   }
-  body .footer ul li {
-    background: white;
+  body .footer2 .logo_footer, body .footer3 .logo_footer, body .footer4 .logo_footer, body .footer5 .logo_footer, body ul .logo_footer {
+    display: none;
+  }
+  body .footer2 ul li, body .footer3 ul li, body .footer4 ul li, body .footer5 ul li, body ul ul li {
+    font-size: 26px;
+  }
+  body .footer2 ul li a, body .footer3 ul li a, body .footer4 ul li a, body .footer5 ul li a, body ul ul li a {
+    color: #1374b4;
+  }
+  body .footer2 ul li :hover, body .footer3 ul li :hover, body .footer4 ul li :hover, body .footer5 ul li :hover, body ul ul li :hover {
+    color: #3487ad;
+    border: 22px;
+    background-color: white;
+    padding: 10px 10px 10px 10px;
+    border-radius: 22px;
+    -webkit-box-shadow: 22px #9356DC;
+            box-shadow: 22px #9356DC;
   }
 }/*# sourceMappingURL=style.css.map */
