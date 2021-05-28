@@ -8,18 +8,38 @@ $primary_color:#9356DC;
 $secondary_color:#FF79DA;
 /*tertiary color*/
 $tertiary_color:#99E2D0;
-/*background_color*/
-$backgroung_color:rgb(238, 234, 234);
+
+
+/*         background      */
+
+/*background_color recherche*/
+$background_color:rgb(238, 234, 234);
+/*background_color container1 mobile*/
+$background_color_container1:rgb(243, 242, 242);
+/*background_filtres*/
+$background-filtres: rgb(245, 245, 245);
+/*background_explorer desktop*/
+$background_explorer_desktop: linear-gradient(0deg, rgb(123, 141, 201) 0%, rgb(123, 195, 228) 100%);
+/*background_explorer mobile*/
+$background_explorer_mobile: linear-gradient(0deg, rgb(214, 41, 230) 0%, rgb(166, 119, 204) 100%);
+
+/*           texte          */
+
 /*text color*/
 $text_color:black;
 /*link visited*/
 $link_visited:white;
 
 
+
+
 /*********************************
 UTILITAIRES POSITION / DIMENSIONS
 **********************************/
-
+/*radius bouton*/
 $radius-btn: 5px;
+/*padding texte*/
 $padding-txt: 10px;
+/*border radius*/
+$border-radius: 22px;
 
