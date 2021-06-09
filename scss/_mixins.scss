@@ -69,21 +69,20 @@ ___________________________________*/
 /*boutton nouveau 1*/
 @mixin nouveau1{
     .Nouveau{
+        height: 30px;
         position: relative;
-        bottom:10rem;
-        left: 11rem;
+        bottom:12rem;
+        left: 14rem;
         padding: 0px 5px 0px 5px;
         background-color:$tertiary_color;
         cursor: pointer;
         border:none;
-         p{display: flex;
-            align-items: center;
-            color: rgb(4, 78, 26);
-            height: 5px;
-        }
-                   
-                   
+        color: rgb(38, 90, 42);
+        font-weight: bold;
+        
     }
+                   
+                   
 }
 
 
@@ -169,7 +168,7 @@ ___________________________________*/
        
        /* Exemple de ville*/
        ::placeholder{
-        color: rgb(3, 3, 3);
+        color: rgb(0, 0, 0);
         opacity: 1;
         text-align: center;
         font-family: 'Roboto';
@@ -184,30 +183,36 @@ ___________________________________*/
 
 /*footer*/
 @mixin footer{
-   footer{   
+   footer{ 
     background-color: rgb(58, 54, 54);
     display: flex;
     justify-content: start;
        .footer  p{
         color: white;
         font-family: 'Shrikland';
-           li{
-            list-style: none;
-               a{
-                text-decoration: none;
-                &-visited
-                {
-                color:$link_visited;
-                      }
+        
+          ul{
+             
+            li{
+                list-style: none;
+                   a{
+                    text-decoration: none;
+                    &-visited
+                    {
+                    color:$link_visited;
+                          }
+                       }
                    }
                }
-           }
+            }
+           
 
            h3{
                width: 100%;
               color:white;
               display: flex;
               justify-content: start;
+              font-size: 5vmin;
               
         }
 }   }
