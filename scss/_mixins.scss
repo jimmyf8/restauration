@@ -15,6 +15,102 @@ margin: 10px 10px 10px 10px;}
     justify-content:center;
     align-items:center;
 }
+
+/*loader*/
+@mixin loader {
+    .cs-loader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(192, 62, 224);
+    }
+      
+    .cs-loader-inner {
+        transform: translateY(-50%);
+        top: 50%;
+        position: absolute;
+        width: calc(100% - 20px);
+        color: #FFF;
+        padding: 0 100px;
+        text-align: center;
+    }
+      
+    .cs-loader-inner label {
+        font-size: 20px;
+        opacity: 0;
+        display:inline-block;
+    }
+      
+    @keyframes lol {
+        0% {
+          opacity: 0;
+          transform: translateX(-300px);
+        }
+        33% {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+        66% {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(300px);
+        }
+    }
+    .cs-loader-inner label:nth-child(10) {
+        -webkit-animation: lol 3s infinite ease-in-out;
+        animation: lol 3s infinite ease-in-out;
+    }
+    .cs-loader-inner label:nth-child(9) {
+        -webkit-animation: lol 3s infinite ease-in-out;
+        animation: lol 3s infinite ease-in-out;
+    }
+    
+    .cs-loader-inner label:nth-child(8) {
+        -webkit-animation: lol 3s infinite ease-in-out;
+        animation: lol 3s infinite ease-in-out;
+    }
+
+    .cs-loader-inner label:nth-child(7) {
+        -webkit-animation: lol 3s infinite ease-in-out;
+        animation: lol 3s infinite ease-in-out;
+    }
+      
+    .cs-loader-inner label:nth-child(6) {
+        -webkit-animation: lol 3s infinite ease-in-out;
+        animation: lol 3s infinite ease-in-out;
+    }
+      
+    .cs-loader-inner label:nth-child(5) {
+        -webkit-animation: lol 3s 100ms infinite ease-in-out;
+        animation: lol 3s 100ms infinite ease-in-out;
+    }
+      
+    .cs-loader-inner label:nth-child(4) {
+        -webkit-animation: lol 3s 200ms infinite ease-in-out;
+        animation: lol 3s 200ms infinite ease-in-out;
+    }
+      
+    .cs-loader-inner label:nth-child(3) {
+        -webkit-animation: lol 3s 300ms infinite ease-in-out;
+        animation: lol 3s 300ms infinite ease-in-out;
+    }
+      
+    .cs-loader-inner label:nth-child(2) {
+        -webkit-animation: lol 3s 400ms infinite ease-in-out;
+        animation: lol 3s 400ms infinite ease-in-out;
+    }
+      
+    .cs-loader-inner label:nth-child(1) {
+        -webkit-animation: lol 3s 500ms infinite ease-in-out;
+        animation: lol 3s 500ms infinite ease-in-out;
+    }
+}
+
 /*__________________________________
 Titre
 ____________________________________/
@@ -24,6 +120,7 @@ ____________________________________/
     h2.resto{
       height: auto;
       margin: auto;
+      
     }
 }
 
@@ -106,7 +203,7 @@ ___________________________________*/
 /*forme bouton menu*/
 @mixin menu{
     .boutton01{
-        animation: slideDown 5s;
+      
         position: relative;
         right: 10px;
         width: 100%;
@@ -121,15 +218,27 @@ ___________________________________*/
         cursor: pointer;
         background-color: rgb(255, 255, 255);
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        &:hover{
-           box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2);
-       }
- 
+        .boutton01:before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 60px;
+            width: 100%;
+            height: 100%;
+            background: #892cdc;
+            border-radius: 0% 0% 0% 0%;
+            z-index: -1;
+            transition: all .5s;
+        }
+        .boutton01:hover::before {
+            top: 0px;
+            border-radius:50;
+        }
     }
 
     @keyframes slideDown {
         from{
-            transform: translateY(200px);
+            transform: translateY(10px);
             opacity: 0;
         }
         to{
@@ -150,12 +259,12 @@ ___________________________________*/
 /*barre de recherche*/
 @mixin search{
     .form {
-        width: 100%;
+        width: 50%;
         border-width: 3px;
         display: flex;
         justify-content: center;
         height: 2rem;
-        
+       
        }
        
        .form label,.form button{
@@ -165,14 +274,16 @@ ___________________________________*/
         cursor: pointer;
         padding: 1px;
         
-       }
+        }
        
        /*icône localistion*/
        label {
         background-color:$background_color;
-        
-       }
+        display: flex;
+        justify-content: center;
        
+       }
+      
        
        /* champs de texte*/
        input {
@@ -194,6 +305,7 @@ ___________________________________*/
         text-align: center;
         font-family: 'Roboto';
         font-weight:bold;
+        
        }
 }
 

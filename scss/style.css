@@ -26,6 +26,7 @@ ___________________________________/
 
 /*padding*/
 /*margin*/
+/*loader*/
 /*__________________________________
 Titre
 ____________________________________/
@@ -48,12 +49,125 @@ ___________________________________*/
 HOME, PAGE 2,3,4,5 LAYOUT & GENERAL
 ***************************************/
 body {
+  /*loader*/
   height: 100vh;
   /*liens*/
+  /*block recherche*/
+  /*restaurant*/
+  /*barre de recherche*/
   /*icône localistion*/
   /* champs de texte*/
   /* Exemple de ville*/
   /*pied de page*/
+  /*bouton menu*/
+  /*main des pages menus*/
+}
+body .cs-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #c03ee0;
+}
+body .cs-loader-inner {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  position: absolute;
+  width: calc(100% - 20px);
+  color: #FFF;
+  padding: 0 100px;
+  text-align: center;
+}
+body .cs-loader-inner label {
+  font-size: 20px;
+  opacity: 0;
+  display: inline-block;
+}
+@-webkit-keyframes lol {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  33% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  66% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+}
+@keyframes lol {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  33% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  66% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+}
+body .cs-loader-inner label:nth-child(10) {
+  -webkit-animation: lol 3s infinite ease-in-out;
+  animation: lol 3s infinite ease-in-out;
+}
+body .cs-loader-inner label:nth-child(9) {
+  -webkit-animation: lol 3s infinite ease-in-out;
+  animation: lol 3s infinite ease-in-out;
+}
+body .cs-loader-inner label:nth-child(8) {
+  -webkit-animation: lol 3s infinite ease-in-out;
+  animation: lol 3s infinite ease-in-out;
+}
+body .cs-loader-inner label:nth-child(7) {
+  -webkit-animation: lol 3s infinite ease-in-out;
+  animation: lol 3s infinite ease-in-out;
+}
+body .cs-loader-inner label:nth-child(6) {
+  -webkit-animation: lol 3s infinite ease-in-out;
+  animation: lol 3s infinite ease-in-out;
+}
+body .cs-loader-inner label:nth-child(5) {
+  -webkit-animation: lol 3s 100ms infinite ease-in-out;
+  animation: lol 3s 100ms infinite ease-in-out;
+}
+body .cs-loader-inner label:nth-child(4) {
+  -webkit-animation: lol 3s 200ms infinite ease-in-out;
+  animation: lol 3s 200ms infinite ease-in-out;
+}
+body .cs-loader-inner label:nth-child(3) {
+  -webkit-animation: lol 3s 300ms infinite ease-in-out;
+  animation: lol 3s 300ms infinite ease-in-out;
+}
+body .cs-loader-inner label:nth-child(2) {
+  -webkit-animation: lol 3s 400ms infinite ease-in-out;
+  animation: lol 3s 400ms infinite ease-in-out;
+}
+body .cs-loader-inner label:nth-child(1) {
+  -webkit-animation: lol 3s 500ms infinite ease-in-out;
+  animation: lol 3s 500ms infinite ease-in-out;
 }
 body .logo {
   display: -webkit-box;
@@ -90,6 +204,7 @@ body li a-visited {
 }
 body .recherche-filtres {
   height: auto;
+  /*block filtre*/
 }
 body .recherche-filtres .form {
   width: 100%;
@@ -136,6 +251,9 @@ body .recherche-filtres .container1 button.explorer:hover {
 }
 body .recherche-filtres .container2 {
   background-color: #ffffff;
+}
+body .recherche-filtres .container2 .filtres {
+  /*fonctionnement*/
 }
 body .recherche-filtres .container2 .filtres h2.fx {
   display: -webkit-box;
@@ -232,6 +350,7 @@ body h2.resto {
 body main.accueil .cards {
   width: 100%;
   background-color: transparent;
+  /*bouton nouveau*/
 }
 body main.accueil .cards div.card {
   padding-bottom: 10px;
@@ -245,6 +364,7 @@ body main.accueil .cards div.card {
   transition: 0.3s;
   border-radius: 22px;
   margin: 10% auto;
+  /*icône coeur*/
 }
 body main.accueil .cards div.card:hover {
   -webkit-box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
@@ -257,7 +377,7 @@ body main.accueil .cards div.card img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  max-width: 900px;
+  max-width: 1800px;
   min-height: 70%;
 }
 body main.accueil .cards div.card .container {
@@ -275,7 +395,7 @@ body main.accueil .cards div.card p.content {
 body main.accueil .cards div.card p {
   margin: 0px 0px 0px 10px;
   width: 100%;
-  font-size: 5vmin;
+  font-size: 3vmax;
 }
 body main.accueil .cards div.card .span {
   display: -webkit-box;
@@ -288,8 +408,8 @@ body main.accueil .cards div.card .span {
 }
 body main.accueil .cards div.card h4 {
   margin: 0px 0px 10px 10px;
-  width: 48%;
-  font-size: 5vmin;
+  min-width: 48%;
+  font-size: 3vmax;
 }
 body main.accueil .cards div.card .fa-heart {
   color: black;
@@ -323,7 +443,7 @@ body main.accueil .cards .Nouveau {
   font-weight: bold;
 }
 body .form {
-  width: 100%;
+  width: 50%;
   border-width: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -348,6 +468,12 @@ body .form label, body .form button {
 }
 body label {
   background-color: #d8d2d2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 body input {
   border: 0;
@@ -435,8 +561,6 @@ body h2.resto {
   margin: auto;
 }
 body .boutton01 {
-  -webkit-animation: slideDown 5s;
-          animation: slideDown 5s;
   position: relative;
   right: 10px;
   width: 100%;
@@ -458,14 +582,27 @@ body .boutton01 {
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-body .boutton01:hover {
-  -webkit-box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
+body .boutton01 .boutton01:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 60px;
+  width: 100%;
+  height: 100%;
+  background: #892cdc;
+  border-radius: 0% 0% 0% 0%;
+  z-index: -1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+body .boutton01 .boutton01:hover::before {
+  top: 0px;
+  border-radius: 50;
 }
 @-webkit-keyframes slideDown {
   from {
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
     opacity: 0;
   }
   to {
@@ -476,8 +613,8 @@ body .boutton01:hover {
 }
 @keyframes slideDown {
   from {
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
     opacity: 0;
   }
   to {
@@ -518,6 +655,7 @@ body .main div.title {
       -ms-flex-align: center;
           align-items: center;
   font-family: "Shrikhand";
+  /*coeur des pages menus*/
 }
 body .main div.title .fa-heart {
   color: black;
@@ -543,8 +681,6 @@ body .main div {
   width: 95%;
 }
 body .main div .boutton01 {
-  -webkit-animation: slideDown 5s;
-          animation: slideDown 5s;
   position: relative;
   right: 10px;
   width: 100%;
@@ -566,14 +702,27 @@ body .main div .boutton01 {
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-body .main div .boutton01:hover {
-  -webkit-box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
+body .main div .boutton01 .boutton01:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 60px;
+  width: 100%;
+  height: 100%;
+  background: #892cdc;
+  border-radius: 0% 0% 0% 0%;
+  z-index: -1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+body .main div .boutton01 .boutton01:hover::before {
+  top: 0px;
+  border-radius: 50;
 }
 @keyframes slideDown {
   from {
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
     opacity: 0;
   }
   to {
@@ -599,7 +748,11 @@ body .main button.Commander:hover {
           box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* tablet desktop version*/
 @media screen and (min-width: 500px) {
+  body {
+    /*fonctionnement*/
+  }
   body .logo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -618,10 +771,13 @@ body .main button.Commander:hover {
   }
   body .logo a img {
     width: 100%;
-    margin-left: 220px;
+    margin-left: 250%;
   }
   body .fx {
     color: #9356DC;
+  }
+  body main.accueil {
+    /*restaurant*/
   }
   body main.accueil h2.resto {
     color: #9356DC;
@@ -637,6 +793,6 @@ body .main button.Commander:hover {
         -ms-flex-direction: row;
             flex-direction: row;
     min-height: 1000px;
-    max-width: 1200px;
+    max-width: 1800px;
   }
 }/*# sourceMappingURL=style.css.map */
