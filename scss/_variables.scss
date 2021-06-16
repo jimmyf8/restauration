@@ -10,7 +10,7 @@ $secondary_color:#FF79DA;
 $tertiary_color:#99E2D0;
 
 
-/*         background      */
+/*background*/
 
 /*background_color recherche*/
 $background_color:rgb(216, 210, 210);
@@ -18,12 +18,10 @@ $background_color:rgb(216, 210, 210);
 $background_color_container1:rgb(243, 242, 242);
 /*background_filtres*/
 $background-filtres: rgb(245, 245, 245);
-/*background_explorer desktop*/
-$background_explorer_desktop: linear-gradient(0deg, rgb(123, 141, 201) 0%, rgb(123, 195, 228) 100%);
 /*background_explorer mobile*/
 $background_explorer_mobile: linear-gradient(0deg, rgb(214, 41, 230) 0%, rgb(166, 119, 204) 100%);
 
-/*           texte          */
+/*texte*/
 
 /*text color*/
 $text_color:black;
@@ -42,4 +40,5 @@ $radius-btn: 5px;
 $padding-txt: 10px;
 /*border radius*/
 $border-radius: 22px;
+
 

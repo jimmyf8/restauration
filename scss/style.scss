@@ -1,3 +1,7 @@
+/* HOME:LIGNE 54
+   PAGE 2,3,4,5: LIGNE 285
+*/
+
 @import './_variables';
 @import './_mixins';
 @import './_placeholders';
@@ -5,161 +9,176 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap');
 
 /**************************************
-HOME, PAGE 2,3,4,5 LAYOUT & GENERAL
+HOME, PAGE  2,3,4,5 LAYOUT & GENERAL
 ***************************************/
 
 body{
+    margin:0;
+    padding: 0;
+    width: 100%;
+    
     /*loader*/
     @include loader;
 
     height: 100vh;
+    /*logo*/
     .logo{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+       @include flexMid;
         width: 20%;
-       
+        
         a{
-           width: 70%;
-            text-decoration: none;
-            img{
-                width: 300%;
-               margin-left: 70px;
-            }
+        margin-top: 5px;
+        width: 60%;
+        text-decoration: none;
+            
+        h3{
+            margin-top: 0px;
         }
+        @media screen and (min-width:500px){
+         margin: 10%;
+        }
+
+        /*image logo*/
+        img{
+            width: 300%;
+            margin-left: 25vw;
+            @media screen and (min-width:500px){
+            margin: 10%;
+            width:100%;
+            margin-left: 40vw;
+                
+        }
+        }
+        }    
     }
     
    
+ /**************************************
+ HOME
+ ***************************************/ 
     
-   
-    h3 .title{
-     display: none;
+
+    /*block recherche accueil*/
+    #recherche-filtres{
+    height: auto;
+    .form{
+    width: 100%; 
     }
+    .recherche{
+    border-top: 2px solid rgba(0,0,0,0.2);
+    }
+
+   /*barre de recherche*/
+   @include search;   
+    /*recherche slogan boutton*/
+    .container1{
+    display: block;
+    align-items: center;
+    text-align: center;
+    background-color: $background_color_container1;
+    width: 100%;
+    height: auto;
+    @media screen and (min-width:500px){
+        padding-bottom: 0px;
+    }
+         
+    /*Réservez le menu...*/
+    @include réservez;
+
+    /*Découvrez des restaurants...*/
+    @include découvrez;
+
+    /*boutton explorer*/
+    button.explorer{
+        @include explorer;
+    } 
+    }
+        
+    /*block fonctionnement*/
+    .container2{
+    margin-top: 20%;
+    background-color: #ffffff;
+
+    /*fonctionnement*/
+    @include fonctionnement;
     
-    
-    /*liens*/
-    li{
-        list-style: none;
-        a{
-            color: $link_visited;
-            text-decoration: none;
-            &-visited{
-            color:rgb(196, 197, 150);
+        .filtres{  
+            ul {  
+            justify-content: center;
+            padding-left:0px;
+                    
+                
+                li{ 
+                animation: slideDown 5s;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 90%;
+                height: 70%;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                border: none;
+                border-radius: $border-radius;
+                margin: 20px;
+                padding: 0px;
+                cursor: pointer;
+                background-color: $background-filtres;
+                &:hover{
+                box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2);
+                background-color: rgb(247, 222, 247);
+                }
+                @media screen and (min-width:500px){
+                margin-top: 5%;
+                }
+
+                /*icône chiffre*/
+                div  .icone{
+                color: #ffffff;
+                align-items: center;
+                background-color: $primary_color;
+                border-radius: 22px;
+                display: flex;
+                /* Hauteur des icônes*/
+                height: calc(100% + 0.9rem);
+                /* Centrer les icônes horizontalement*/
+                justify-content: center;
+                width: 3vmax;
+                @media screen and (min-width:500px){
+                width: 6vmin;
+                }
+                            
+                }
+                /*filtres fonctionnement*/
+                span{
+                width: 69vw;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                right: 35px;
+                font-family: 'Roboto';
+                font-weight: bolder;
+
+                /*icone smartphone...*/
+                i{
+                color: #999999;
+                &:hover{
+                color: $primary_color;
+                } }
+                        
+                p{
+                text-align: center;
+                font-size: 5vmin;
+                font-family: 'Roboto';
+                font-weight: bolder;
+                }
+                }
+                }
+                }
             }
         }
     }
 
-    /*block recherche*/
-    .recherche-filtres{
-        height: auto;
-        .form{
-         width: 100%; 
-        }
-        
-        .container1{
-            display: block;
-            align-items: center;
-            text-align: center;
-            background-color: $background_color_container1;
-            width: 100%;
-            height: auto;
-            
-            h1.h1_index{
-                width: 80%;
-                font-size: 8vmin;
-                font-family: 'Roboto';
-                font-weight: bolder;
-                margin: auto;
-                
-            }
-            h2.h2_index{
-                font-size: 5vmin;
-                font-weight: lighter;
-                font-family: 'Roboto';
-            }
-            /*boutton explorer*/
-            button.explorer{
-              @include explorer;
-            } 
-        }
-        
-        /*block filtre*/
-        .container2{
-            background-color: #ffffff;
-            .filtres{
-               /*fonctionnement*/
-               h2.fx {
-                  display: flex;
-                  justify-content: start;
-                  width: 100%;
-                  font-size: 7vmin;
-                  font-family: 'Roboto';
-                  font-weight: bolder;
-                }
-                
-                ul {  
-                  justify-content: center;
-                    padding-left:0px;
-                
-                    li{  animation: slideDown 5s;
-                        display: flex;
-                        justify-content: center;
-                        width: 90%;
-                        margin: auto;
-                        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-                        height: 70%;
-                        flex-wrap: wrap;
-                        border: none;
-                        border-radius: $border-radius;
-                        margin: 20px;
-                        padding: 0px;
-                        cursor: pointer;
-                        background-color: $background-filtres;
-                        &:hover{
-                            box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2);
-                            background-color: rgb(243, 156, 239);
-                        }
-                        div  .icone{
-                            color: #ffffff;
-                            align-items: center;
-                            background-color: $primary_color;
-                            border-radius: 22px;
-                            display: flex;
-                            /* Hauteur des icônes*/
-                            height: calc(100% + 0.9rem);
-                            /* Centrer les icônes horizontalement*/
-                            justify-content: center;
-                            width: 1.2rem;   
-                        }
-                        span{
-                            width: 110%;
-                            display: flex;
-                            justify-content: space-between;
-                            position: relative;
-                            right: 50px;
-                            font-family: 'Roboto';
-                            font-weight: bolder;
-                          i{
-                              color: #999999;
-                              &:hover{
-                                color: $primary_color;
-                            } }
-                            p{
-                                text-align: center;
-                                font-size: 5vmin;
-                                font-family: 'Roboto';
-                                font-weight: bolder;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
     /*restaurant*/
-    h2.resto{
-        font-size: 7vmin;
-    }
+    @include resto;
 
     main.accueil{
     
@@ -172,11 +191,16 @@ body{
                height: 210px;
                width: 80%;
                min-width: 300px;
+               max-height: 800px ;
                /* Add shadows to create the "card" effect */
                box-shadow: 0 4px 5px 0 rgba(0,0,0,0.2);
                transition: 0.3s;
                border-radius: $border-radius;
                margin:10% auto;
+               @media screen and (min-width:500px) {
+               min-height: 800px;
+               
+               }
               
                &:hover{
                    box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2);
@@ -201,23 +225,27 @@ body{
                 p.content{
                     margin: 0px;
                     width: 100%;
+                    @media screen and (min-width:500px) {
+                    margin:10px;   
+                    }
                 }
                 p{
                     margin: 0px 0px 0px 10px;
                     width: 100%;
                     font-size: 3vmax;
+                    font-family: 'Roboto';
                 }
                 .span{
                    
                     display: flex;
                     justify-content: space-between;
-                    background: blue;
+                    
                 }
                 h4{
                     margin: 0px 0px 10px 10px;
                     min-width: 48%;
                     
-                    font-size: 3vmax;
+                    font-size: 3.5vmax;
                 }
                
                 /*icône coeur*/
@@ -248,112 +276,134 @@ body{
         }   
     }
 
-   /*barre de recherche*/
-   @include search;
-   /*pied de page*/
-   @include footer;
+  
+  
 
-   @include resto;
-   /*bouton menu*/
-   @include menu;
+ /**************************************
+  PAGE  2,3,4,5 
+ ***************************************/
+   
 
 
 
    header{
+    /*image header*/
     div.image img{
-     height: 200px;
-     width: 100%;
+    height: 200px;
+    width: 102%;
+    @media screen and (min-width:500px){
+    height:50%;
+    }
    }
-}  /*main des pages menus*/
+
+}   
+
+   /*main des pages menus*/
    .main{
    border-top-left-radius: $border-radius;
    border-top-right-radius: $border-radius;
    background-color: $background_color_container1;
    display: flex;
    flex-direction: column;
-   width: 100%;
+   width: 102%;
    position: relative;
    bottom: 50px;
    
-
-   div.title{
-     width: 90%;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     font-family: 'Shrikhand';
-     /*coeur des pages menus*/
-     .fa-heart {
-        color: rgb(0, 0, 0);
-       
-        border-radius: 50%;
-        padding:.2em;
-     }
-     .fa-heart::before {
-        content: "\f004";
-        
-        transition: color 2s ease-out;
-     }
-     .fa-heart:hover::before{
-        color: red;
-        cursor: pointer;
-        font-weight: bolder;
-     }
-    } 
+    /*titre des menus*/
+    @include h1;
   
-
+    /*titre :entrées, plats, dessert*/
     h2{
-     border-bottom: solid 3px $tertiary_color;
-     width: 18%;
+     border-bottom: solid 1px $tertiary_color;
+     width: 10%;
      max-width: 15%;
+     font-family:'Roboto' ;
+     font-size: 4vmin;
+     margin-left: 10px;
+     @media screen and (min-width:500px){
+     width: 5%;
+     max-width: 5%;
+     border-bottom: solid 1px $tertiary_color;
     }
- 
-    div{
+    }
+
+    /*bouton des menus*/
+    @include menu;
+    .menus{
+    position: relative;
+    right: 10px;
+    width: 92%;
+    max-height: 80px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: none;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 6px 6px 6px 6px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    font-size: 3.5vmin;
+    z-index: 0;
+    overflow: hidden;
+    transition: padding-right 300ms ease-in-out;
        
-        width: 95%;
-        @include menu;
+    
+    &:hover .check {
+        opacity: 1;
+        transform: translate(-50px);
     }
+    &:hover .fa-check-circle {
+        transform: rotate(360deg) ;
+    }  
+    }
+    
+    .check{
+    @include flexMid;
+    background-color: $tertiary_color;
+    width: 50px;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: absolute;
+    padding: 20px;
+    right: -50px;
+    top: 0;
+    opacity: 0;
+    transition: transform 330ms ease-in-out;
+    & .fa-check-circle {
+    display: flex;
+    align-content: center;
+    color: transparent;
+    color:white;
+    overflow: hidden;
+    transition: transform 500ms ease-in-out;
+    }
+    }
+   
+    /*bouton commander*/
     @include Commander;
 }
 }
-/* tablet desktop version*/
-@media screen and (min-width:500px){
-    body{
 
-        .logo{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 20%;
-           
-            a{
-               width: 70%;
-                text-decoration: none;
-                img{
-                    width:100%;
-                   margin-left: 250%;
-                }
-            }
-        }
-        /*fonctionnement*/
-        .fx{
-            color:$primary_color
-        }
-        main.accueil{
-            /*restaurant*/
-            h2.resto{
-                color:$primary_color;
-            }
-            .card{
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: row;
-                min-height: 1000px;
-                max-width: 1800px;
-            }
-          
-        }
-      
-    }
-   
+
+/*______________________________________
+footer
+_______________________________________*/
+
+ /*pied de page*/
+ @include footer;
+li{
+    width: 150%;
+    list-style: none;
+    
+    a{
+    color: $link_visited;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 3vmax;
+    }   
 }
