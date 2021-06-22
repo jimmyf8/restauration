@@ -403,7 +403,7 @@ body .logo a img {
     margin-left: 22.1vw;
   }
 }
-body #recherche-filtres {
+body .recherche-filtres {
   height: auto;
   /*barre de recherche*/
   /*icône localistion*/
@@ -412,13 +412,13 @@ body #recherche-filtres {
   /*recherche slogan boutton*/
   /*block fonctionnement*/
 }
-body #recherche-filtres .form {
+body .recherche-filtres .form {
   width: 100%;
 }
-body #recherche-filtres .recherche {
+body .recherche-filtres .recherche {
   border-top: 2px solid rgba(0, 0, 0, 0.2);
 }
-body #recherche-filtres .form {
+body .recherche-filtres .form {
   width: 100%;
   border-width: 3px;
   display: -webkit-box;
@@ -430,11 +430,11 @@ body #recherche-filtres .form {
   height: 2rem;
 }
 @media screen and (min-width: 500px) {
-  body #recherche-filtres .form {
+  body .recherche-filtres .form {
     height: 4rem;
   }
 }
-body #recherche-filtres .form label, body #recherche-filtres .form button {
+body .recherche-filtres .form label, body .recherche-filtres .form button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -445,7 +445,7 @@ body #recherche-filtres .form label, body #recherche-filtres .form button {
   cursor: pointer;
   padding: 1px;
 }
-body #recherche-filtres label {
+body .recherche-filtres label {
   background-color: #d8d2d2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -454,12 +454,12 @@ body #recherche-filtres label {
       -ms-flex-pack: center;
           justify-content: center;
 }
-body #recherche-filtres label span {
+body .recherche-filtres label span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-body #recherche-filtres input {
+body .recherche-filtres input {
   border: 0;
   /* gras*/
   -webkit-box-flex: 1;
@@ -469,7 +469,7 @@ body #recherche-filtres input {
   width: 100%;
 }
 @media screen and (min-width: 500px) {
-  body #recherche-filtres input {
+  body .recherche-filtres input {
     height: 1.8rem;
     width: 200px;
     display: -webkit-box;
@@ -479,7 +479,7 @@ body #recherche-filtres input {
         align-content: center;
   }
 }
-body #recherche-filtres ::-webkit-input-placeholder {
+body .recherche-filtres ::-webkit-input-placeholder {
   color: black;
   opacity: 1;
   text-align: center;
@@ -487,7 +487,7 @@ body #recherche-filtres ::-webkit-input-placeholder {
   font-weight: 600;
   font-size: 4vmin;
 }
-body #recherche-filtres ::-moz-placeholder {
+body .recherche-filtres ::-moz-placeholder {
   color: black;
   opacity: 1;
   text-align: center;
@@ -495,7 +495,7 @@ body #recherche-filtres ::-moz-placeholder {
   font-weight: 600;
   font-size: 4vmin;
 }
-body #recherche-filtres :-ms-input-placeholder {
+body .recherche-filtres :-ms-input-placeholder {
   color: black;
   opacity: 1;
   text-align: center;
@@ -503,7 +503,7 @@ body #recherche-filtres :-ms-input-placeholder {
   font-weight: 600;
   font-size: 4vmin;
 }
-body #recherche-filtres ::-ms-input-placeholder {
+body .recherche-filtres ::-ms-input-placeholder {
   color: black;
   opacity: 1;
   text-align: center;
@@ -511,7 +511,7 @@ body #recherche-filtres ::-ms-input-placeholder {
   font-weight: 600;
   font-size: 4vmin;
 }
-body #recherche-filtres ::placeholder {
+body .recherche-filtres ::placeholder {
   color: black;
   opacity: 1;
   text-align: center;
@@ -519,7 +519,7 @@ body #recherche-filtres ::placeholder {
   font-weight: 600;
   font-size: 4vmin;
 }
-body #recherche-filtres .container1 {
+body .recherche-filtres .container1 {
   display: block;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -533,35 +533,35 @@ body #recherche-filtres .container1 {
   /*boutton explorer*/
 }
 @media screen and (min-width: 500px) {
-  body #recherche-filtres .container1 {
+  body .recherche-filtres .container1 {
     padding-bottom: 0px;
   }
 }
-body #recherche-filtres .container1 h1.h1_index {
+body .recherche-filtres .container1 h1.h1_index {
   width: 80%;
   font-size: 8vmin;
   font-family: "Roboto";
   margin: 30px;
 }
 @media screen and (min-width: 500px) {
-  body #recherche-filtres .container1 h1.h1_index {
+  body .recherche-filtres .container1 h1.h1_index {
     margin: 3%;
     width: 95%;
   }
 }
-body #recherche-filtres .container1 h2.h2_index {
+body .recherche-filtres .container1 h2.h2_index {
   font-size: 5vmin;
   font-weight: lighter;
   font-family: "Roboto";
   margin: 25px;
 }
 @media screen and (min-width: 500px) {
-  body #recherche-filtres .container1 h2.h2_index {
+  body .recherche-filtres .container1 h2.h2_index {
     margin: 5%;
     width: 90%;
   }
 }
-body #recherche-filtres .container1 button.explorer {
+body .recherche-filtres .container1 button.explorer {
   width: 60%;
   font-size: 4vmin;
   border: none;
@@ -573,22 +573,22 @@ body #recherche-filtres .container1 button.explorer {
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-body #recherche-filtres .container1 button.explorer:hover {
+body .recherche-filtres .container1 button.explorer:hover {
   background: #bf71d8;
   -webkit-box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
 }
 @media screen and (min-width: 500px) {
-  body #recherche-filtres .container1 button.explorer {
+  body .recherche-filtres .container1 button.explorer {
     margin-bottom: 0.1%;
   }
 }
-body #recherche-filtres .container2 {
+body .recherche-filtres .container2 {
   margin-top: 20%;
   background-color: #ffffff;
   /*fonctionnement*/
 }
-body #recherche-filtres .container2 .fx {
+body .recherche-filtres .container2 .fx {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -603,22 +603,22 @@ body #recherche-filtres .container2 .fx {
   font-family: "Roboto";
   font-size: 4vmax;
 }
-body #recherche-filtres .container2 .fx:hover {
+body .recherche-filtres .container2 .fx:hover {
   color: black;
 }
 @media screen and (min-width: 500px) {
-  body #recherche-filtres .container2 .fx {
+  body .recherche-filtres .container2 .fx {
     width: 100%;
     padding: 50px 10px 80px 10px;
   }
 }
-body #recherche-filtres .container2 .filtres ul {
+body .recherche-filtres .container2 .filtres ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding-left: 0px;
 }
-body #recherche-filtres .container2 .filtres ul li {
+body .recherche-filtres .container2 .filtres ul li {
   -webkit-animation: slideDown 5s;
           animation: slideDown 5s;
   display: -webkit-box;
@@ -642,17 +642,18 @@ body #recherche-filtres .container2 .filtres ul li {
   /*icône chiffre*/
   /*filtres fonctionnement*/
 }
-body #recherche-filtres .container2 .filtres ul li:hover {
+body .recherche-filtres .container2 .filtres ul li:hover {
   -webkit-box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
   background-color: #f7def7;
 }
 @media screen and (min-width: 500px) {
-  body #recherche-filtres .container2 .filtres ul li {
+  body .recherche-filtres .container2 .filtres ul li {
     margin: 5%;
+    width: 90%;
   }
 }
-body #recherche-filtres .container2 .filtres ul li div .icone {
+body .recherche-filtres .container2 .filtres ul li div .icone {
   color: #ffffff;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -662,7 +663,7 @@ body #recherche-filtres .container2 .filtres ul li div .icone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 8px;
+  margin-right: 2px;
   /* Hauteur des icônes*/
   height: calc(100% + 0.9rem);
   /* Centrer les icônes horizontalement*/
@@ -672,12 +673,12 @@ body #recherche-filtres .container2 .filtres ul li div .icone {
   width: 4vmax;
 }
 @media screen and (min-width: 500px) {
-  body #recherche-filtres .container2 .filtres ul li div .icone {
+  body .recherche-filtres .container2 .filtres ul li div .icone {
     width: 6vmin;
   }
 }
-body #recherche-filtres .container2 .filtres ul li span {
-  width: 95vw;
+body .recherche-filtres .container2 .filtres ul li span {
+  width: 98vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -685,22 +686,27 @@ body #recherche-filtres .container2 .filtres ul li span {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  right: 5px;
   font-family: "Roboto";
   font-weight: bolder;
   /*icone smartphone...*/
 }
-body #recherche-filtres .container2 .filtres ul li span i {
+@media screen and (min-width: 500px) {
+  body .recherche-filtres .container2 .filtres ul li span {
+    width: 92vw;
+  }
+}
+body .recherche-filtres .container2 .filtres ul li span i {
   color: #999999;
 }
-body #recherche-filtres .container2 .filtres ul li span i:hover {
+body .recherche-filtres .container2 .filtres ul li span i:hover {
   color: #9356DC;
 }
-body #recherche-filtres .container2 .filtres ul li span p {
+body .recherche-filtres .container2 .filtres ul li span p {
   text-align: center;
   font-size: 5vmin;
   font-family: "Roboto";
   font-weight: bolder;
+  margin-right: 20px;
 }
 body h2.resto {
   margin: 10px 10px 10px 10px;
