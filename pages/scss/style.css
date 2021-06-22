@@ -611,18 +611,21 @@ body .recherche-filtres .container2 .filtres ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 90%;
-  height: 70%;
+  min-height: 10vmax;
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   border: none;
   border-radius: 22px;
-  margin: 5px 5px 20px 5px;
+  margin: 5px 8px 20px 8px;
   padding: 10px;
   cursor: pointer;
   background-color: whitesmoke;
@@ -652,7 +655,7 @@ body .recherche-filtres .container2 .filtres ul li div .icone {
   display: flex;
   margin-right: 2px;
   /* Hauteur des icônes*/
-  height: calc(100% + 0.9rem);
+  height: calc(100% + 0.9);
   /* Centrer les icônes horizontalement*/
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -661,14 +664,16 @@ body .recherche-filtres .container2 .filtres ul li div .icone {
 }
 @media screen and (min-width: 500px) {
   body .recherche-filtres .container2 .filtres ul li div .icone {
-    width: 6vmin;
+    width: 4vmin;
+    height: 2vmax;
   }
 }
-body .recherche-filtres .container2 .filtres ul li span {
-  width: 98vw;
+body .recherche-filtres .container2 .filtres ul li div .filtre {
+  width: 90vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 30px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -678,17 +683,19 @@ body .recherche-filtres .container2 .filtres ul li span {
   /*icone smartphone...*/
 }
 @media screen and (min-width: 500px) {
-  body .recherche-filtres .container2 .filtres ul li span {
-    width: 92vw;
+  body .recherche-filtres .container2 .filtres ul li div .filtre {
+    width: 70vw;
+    font-size: 5vmin;
+    margin-right: 300px;
   }
 }
-body .recherche-filtres .container2 .filtres ul li span i {
+body .recherche-filtres .container2 .filtres ul li div .filtre i {
   color: #999999;
 }
-body .recherche-filtres .container2 .filtres ul li span i:hover {
+body .recherche-filtres .container2 .filtres ul li div .filtre i:hover {
   color: #9356DC;
 }
-body .recherche-filtres .container2 .filtres ul li span p {
+body .recherche-filtres .container2 .filtres ul li div .filtre p {
   text-align: center;
   font-size: 5vmin;
   font-family: "Roboto";

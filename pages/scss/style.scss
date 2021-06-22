@@ -120,14 +120,15 @@ body{
                 li{ 
                 animation: slideDown 5s;
                 display: flex;
+                align-items: center;
                 justify-content: center;
                 flex-wrap: wrap;
                 width: 90%;
-                height: 70%;
+                min-height: 10vmax;
                 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
                 border: none;
                 border-radius: $border-radius;
-                margin: 5px 5px 20px 5px;
+                margin: 5px 8px 20px 8px;
                 padding: 10px;
                 cursor: pointer;
                 background-color: $background-filtres;
@@ -150,25 +151,29 @@ body{
                 display: flex;
                 margin-right: 2px;
                 /* Hauteur des icônes*/
-                height: calc(100% + 0.9rem);
+                height: calc(100% + 0.9);
                 /* Centrer les icônes horizontalement*/
                 justify-content: center;
                 width: 4vmax;
                 @media screen and (min-width:500px){
-                width: 6vmin;
+                width: 4vmin;
+                height: 2vmax;
                 }
                             
                 }
                 /*filtres fonctionnement*/
-                span{
-                width: 98vw;
+                div .filtre{
+                width: 90vw;
                 display: flex;
+                margin-right: 30px;
                 justify-content: space-between;
                 position: relative;
                 font-family: 'Roboto';
                 font-weight: bolder;
                 @media screen and (min-width:500px) {
-                    width: 92vw;
+                    width: 70vw;
+                    font-size: 5vmin;
+                    margin-right: 300px;
                 }
                 /*icone smartphone...*/
                 i{
@@ -183,6 +188,7 @@ body{
                 font-family: 'Roboto';
                 font-weight: bolder;
                 margin-right: 20px;
+            
                 
                 
                 }
