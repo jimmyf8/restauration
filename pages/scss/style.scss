@@ -4,7 +4,9 @@
 
 @import './_variables';
 @import './_mixins';
-@import './_placeholders';
+@import './_position';
+@import './_bouttons';
+@import './_titres';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
@@ -14,10 +16,10 @@ HOME, PAGE  2,3,4,5 LAYOUT & GENERAL
 ***************************************/
 
 body{
+
+    margin:0 auto;
+   
     
-    margin:0;
-    padding: 0;
-    width: 100%;
     /*loader*/
     @include loader;
 
@@ -27,15 +29,16 @@ body{
        @include flexMid;
         width: 30%;
         @media screen and (min-width:500px){
-        width: 20%;
+        width: 80%;
       
         } 
         a{
         margin: 10px;
         width: 60%;
         text-decoration: none;
+        color: black;
         @media screen and (min-width:500px){
-        width: 80%;
+        width: 70%;
         }    
         h3{
             margin-top: 0px;
@@ -47,11 +50,11 @@ body{
         /*image logo*/
         img{
             width: 300%;
-            margin-left: 25vw;
+            margin-left: 15vw;
             @media screen and (min-width:500px){
             margin: 10%;
-            width:100%;
-            margin-left: 40vw;
+            width:50%;
+            margin-left: 22.1vw;
                 
         }
         }
@@ -133,7 +136,8 @@ body{
                 background-color: rgb(247, 222, 247);
                 }
                 @media screen and (min-width:500px){
-                margin-left: 5%;
+                margin: 5%;
+
                 }
 
                 /*icône chiffre*/
@@ -195,6 +199,7 @@ body{
             width: 100%;
             background-color: transparent;
             div.card {
+                
                position: relative;
                padding-bottom: 10px;
                height: 210px;
@@ -208,6 +213,7 @@ body{
                margin:10% auto;
                @media screen and (min-width:500px) {
                min-height: 800px;
+               
                
                }
               
@@ -229,12 +235,14 @@ body{
                     width: 180%;
                     display: flex;
                     flex-wrap: wrap;
+                    text-decoration: none;
                     
                 }
                 p.content{
                     margin: 0px;
                     padding-bottom:3px;
                     width: 100%;
+                    text-decoration: none;
                     @media screen and (min-width:500px) {
                     margin:10px;   
                     }
@@ -245,14 +253,19 @@ body{
                     font-size: 3vmax;
                     font-family: 'Roboto';
                     font-weight: 500;
-                }
-                .span{
                    
+                }
+                a{
+                    text-decoration: none;
+                    color:$text_color;
+                   }
+                .span{
+                    
                     display: flex;
                     justify-content: space-between;
                     
                 }
-                h4{
+                h4{ 
                     margin: 0px 0px 10px 10px;
                     min-width: 48%;
                     font-family: 'Roboto';
@@ -304,6 +317,7 @@ body{
     width: 102%;
     @media screen and (min-width:500px){
     height:50%;
+   
     }
    }
 
@@ -316,7 +330,7 @@ body{
    background-color: $background_color_container1;
    display: flex;
    flex-direction: column;
-   min-width: 102%;
+   min-width: 100%;
    position: relative;
    bottom: 50px;
    @media screen and (min-width:700px){
@@ -343,104 +357,7 @@ body{
     }
     }
 
-    /*bouton des menus*/
-    @include menu;
-    .container_menu{
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    border: none;
-    padding:  6px 0px 0px 10px;
-    font-size: 3vmax;
-    border-radius: 15px;
-    box-shadow: -1px 2px 10px #0000002e;
-    margin: 10px;
-    margin-bottom: 10px;
-    position: relative;
-    overflow: hidden;
-    @media screen and (min-width:700px){
-        display: flex;
-        justify-content: space-between;
-        min-width:60vmax;
-    }
-   
-    }
-    .container_menu:hover .check {
-    opacity: 1;
-    transform: translate(-96px);
   
-    }
-    
-    .container_menu:hover .fa-check-circle {
-    transform: rotate(360deg) ;
-    transition: transform 600ms ease-in-out;      
-    }
-    .container_menu:hover .prix{
-    position: absolute;
-    left:  0;
-    margin-left: 40vmax;
-    
-    }
-    .container_menu:hover .overflow-ellipsis {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 5px;
-    }
-    .container_menu:hover .description_prix{
-        width: 10px;
-   
-    }
-    
-        
-   
-    p {
-        /* Nécessaires pour text-overflow */
-        white-space: nowrap;
-        overflow: hidden;
-        
-    }
-    .prix{
-    margin-left: 2vmax;
-
-    }
-
-    h4.menu{
-    margin: 0px;
-    font-family: 'Roboto';
-    }
-    .description_prix{
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Roboto';
-    font-size: normal;
-    width: 80%;
-    max-width:77%;
-    position: relative;
-    }
-    .overflow-ellipsis{
-    min-width: 255px;
-    }
-
-    .check{
-        position:absolute;
-        top:-0.3px;
-        right:-96px;
-        background-color: #99E2D0;
-        color: white;
-        min-width: 50px;
-        height: 100%;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        display:flex;
-        justify-content:center;
-        padding-top:1.4px;
-        align-items: center;
-        opacity: 0;
-        transition: all .3s ease-in-out;
-
-    
-}
-    }
     /*bouton commander*/
     @include Commander;
    
@@ -465,4 +382,4 @@ li{
     justify-content: space-between;
     font-size: 3vmax;
     }   
-}
+}}

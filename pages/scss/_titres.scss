@@ -1,0 +1,121 @@
+/*__________________________________
+Titre
+____________________________________/
+
+/*titre fonctionnement*/
+@mixin fonctionnement{
+    .fx{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    margin:10px 10px 40px 10px;
+    padding-top: 20px;
+    height: 0px;
+    font-family:'Roboto';
+    font-size: 4vmax;
+    &:hover{
+    color: rgb(0, 0, 0);
+    }
+    @media screen and (min-width:500px){
+    width: 100%;
+    padding: 50px 10px 80px 10px;
+    }
+    }
+   
+}
+
+/*titre restaurant*/
+@mixin resto{
+    h2.resto{
+    margin:10px 10px 10px 10px;
+    padding-top: 10px;
+    font-size: 7vmin;
+    font-family:'Roboto';
+    @media screen and (min-width:500px){
+    padding: 50px 10px 80px 10px;
+    }
+    }
+}
+
+/*titre menus */
+@mixin h1{
+    div.title{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Shrikhand';
+        font-size: 2vmax;
+        margin-left: 10px;
+        /*icône coeur*/
+        .fa-heart {
+            color: rgb(0, 0, 0);
+           
+            border-radius: 50%;
+            padding:.2em;
+        }
+        .fa-heart::before {
+            content: "\f004";
+            
+            transition: color 2s ease-out;
+        }
+        .fa-heart:hover::before{
+            color: rgb(0, 183, 255);
+            cursor: pointer;
+            font-weight: bold;
+        }
+        i{  color: black;
+            font-size: 6vmin;
+        }
+       
+        } 
+}
+
+/*titre*/
+@mixin réservez{
+    h1.h1_index{
+    width: 80%;
+    font-size: 8vmin;
+    font-family: 'Roboto';
+    margin: 30px;
+    @media screen and (min-width:500px){
+    margin: 3%;
+    width: 95%;
+    }
+    }
+}
+
+/*découvrez des restaurants...*/
+@mixin découvrez{
+    h2.h2_index{
+    font-size: 5vmin;
+    font-weight: lighter;
+    font-family: 'Roboto';
+    margin: 25px;
+    @media screen and (min-width:500px){
+    margin: 5%;
+    width: 90%;
+    }
+    }
+}
+
+/*titre carte*/
+@mixin titre_carte{
+    h4{
+    margin: 0px 0px 10px 10px;
+    min-width: 48%;
+    font-size: 4vmax;
+    font-family:'Roboto';
+    font-weight: bold;
+    @media screen and (min-width:771px){
+    min-width: 90%;
+    }
+    @media screen and (min-width:500px) and(max-width:770px){
+    min-width: 10%; 
+    min-width: 85%;
+    display: flex;
+    align-items: center;
+    }
+    }
+}

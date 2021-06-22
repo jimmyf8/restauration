@@ -1,0 +1,206 @@
+/*boutton menu: ligne 77*/
+
+
+
+/*_________________________________
+Boutton accueil
+___________________________________*/
+
+/*boutton explorer*/
+@mixin Commander{
+    button.Commander{
+    font-size: 2vmax;
+    margin:50px 50px 100px 80px;
+    width: 50%;
+    background: $background_explorer_mobile;
+    border: none;
+    border-radius: $border-radius;
+    padding: 16px;   
+    color: $link_visited;
+    cursor: pointer;
+    @media screen and (min-width:771px){
+    width: 150%;
+    margin-left:12vw;
+    transform: translate(-50%,-50%);
+    
+    }
+    &:hover{
+    box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2);
+    }
+    }
+   
+
+}
+   
+
+
+/*boutton nouveau */
+@mixin nouveau1{
+    .Nouveau{
+    min-height: 30px;
+    position: absolute;
+    top:0;
+    right: 0;
+    margin: 10px;
+    padding: 0px 5px 0px 5px;
+    background-color:$tertiary_color;
+    cursor: pointer;
+    border:none;
+    color: rgb(38, 90, 42);
+    font-weight: bold;
+    font-size: 4vmin;  
+    }      
+             
+}
+
+
+/*boutton explorer*/
+@mixin explorer{    
+    width: 60%;
+    font-size: 4vmin;
+    border: none;
+    background: $background_explorer_mobile;
+    border-radius: $border-radius;
+    padding:  10px 10px 10px 10px;   
+    color: $link_visited;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    &:hover{
+    background: lighten($color: #30103a, $amount: 50);
+    box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2);
+    }
+    @media screen and (min-width:500px){
+    margin-bottom: 0.1%;
+    }
+}
+
+
+/*_________________________________
+Bouttons menus
+___________________________________*/
+
+
+  /*bouton des menus*/
+  .container_menu{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: none;
+    padding:  6px 0px 0px 10px;
+    font-size: 3vmax;
+    border-radius: 15px;
+    box-shadow: -1px 2px 10px #0000002e;
+    margin: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    @media screen and (min-width:700px){
+        display: flex;
+        justify-content: space-between;
+        width:80vmax;
+        margin: 5%;
+        
+    }
+   
+    }
+    .container_menu:hover .check {
+    opacity: 1;
+    transform: translate(-96px);
+  
+    }
+    
+    .container_menu:hover .fa-check-circle {
+    transform: rotate(360deg) ;
+    transition: transform 600ms ease-in-out;      
+    }
+    .container_menu:hover .prix{
+    position: absolute;
+    left:  0;
+    margin-left: 39vmax;
+    @media screen and (min-width:500px){
+        margin-left: 65vmax;
+    }
+    
+    }
+    .container_menu:hover .overflow-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 36vmax;
+    }
+    .container_menu:hover h4.menu {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 5px;
+    }
+    .container_menu:hover .description_prix{
+        width: 10px;
+   
+    }
+    
+        
+   
+    p {font-size: 4.3vmin;
+        /* Nécessaires pour text-overflow */
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .prix{
+    margin-left: 1.5vmax;
+    @media screen and (min-width:500px) {
+        margin-left: 1px;
+    }
+
+    }
+
+    h4.menu{
+    margin: 0px;
+    font-family: 'Roboto';
+    min-width: 205px;
+    @media  screen and (min-width:500px) {
+        max-width: 600px;
+    }
+    }
+    .description_prix{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto';
+    font-size: normal;
+    width: 80%;
+    max-width:87%;
+    position: relative;
+    @media  screen and (min-width:500px) {
+        max-width: 650px;
+    }
+    }
+    .overflow-ellipsis{
+    min-width:48vmax;
+    @media  screen and (min-width:500px) {
+        min-width: 70vmax;
+    }
+    }
+
+    .check{
+        position:absolute;
+        top:-0.3px;
+        right:-96px;
+        background-color: #99E2D0;
+        color: white;
+        min-width: 50px;
+        height: 100%;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        display:flex;
+        justify-content:center;
+        padding-top:1.4px;
+        align-items: center;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        i{
+            font-size: 4vmax;
+        }
+        @media  screen and (min-width:500px) {
+            min-width: 9vmax;
+        }
+
+    
+}
+    
