@@ -144,9 +144,8 @@ ____________________________________/
     color: rgb(0, 0, 0);
     }
     @media screen and (min-width:500px){
-    color:$primary_color;
     width: 100%;
-    @include flexMid;
+    padding: 50px 10px 80px 10px;
     }
     }
    
@@ -160,9 +159,7 @@ ____________________________________/
     font-size: 7vmin;
     font-family:'Roboto';
     @media screen and (min-width:500px){
-    color:$primary_color;
-    width: 100%;
-    @include flexMid;
+    padding: 50px 10px 80px 10px;
     }
     }
 }
@@ -207,10 +204,10 @@ ____________________________________/
     width: 80%;
     font-size: 8vmin;
     font-family: 'Roboto';
-    font-weight: bolder;
-    margin: auto;
+    margin: 30px;
     @media screen and (min-width:500px){
-    margin: 5%;
+    margin: 3%;
+    width: 95%;
     }
     }
 }
@@ -221,8 +218,10 @@ ____________________________________/
     font-size: 5vmin;
     font-weight: lighter;
     font-family: 'Roboto';
+    margin: 25px;
     @media screen and (min-width:500px){
     margin: 5%;
+    width: 90%;
     }
     }
 }
@@ -283,9 +282,10 @@ ___________________________________*/
 @mixin nouveau1{
     .Nouveau{
     min-height: 30px;
-    position: relative;
-    bottom: 200px;
-    left: 215px;
+    position: absolute;
+    top:0;
+    right: 0;
+    margin: 10px;
     padding: 0px 5px 0px 5px;
     background-color:$tertiary_color;
     cursor: pointer;
@@ -442,9 +442,9 @@ ______________________________________________*/
     input {
     border: 0;
     /* gras*/
-    font-weight: bold;
+    
     flex: 1;
-    font-family: 'Roboto';
+   
     background-color:$background_color;
     box-shadow: 50 80px 16px 80 rgba(7,0,8,0.2);
     width: 100%;
@@ -462,7 +462,7 @@ ______________________________________________*/
     opacity: 1;
     text-align: center;
     font-family: 'Roboto';
-    font-weight:bold;
+    font-weight: 600;
     font-size: 4vmin;
     }
 }
