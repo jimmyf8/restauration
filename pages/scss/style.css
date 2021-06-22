@@ -63,6 +63,7 @@ footer
 _________________________________*/
 /*border-top*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 /**************************************
 HOME, PAGE  2,3,4,5 LAYOUT & GENERAL
 ***************************************/
@@ -83,6 +84,7 @@ body {
    PAGE  2,3,4,5 
   ***************************************/
   /*main des pages menus*/
+  /*bouton commander*/
 }
 body .cs-loader {
   position: absolute;
@@ -202,13 +204,23 @@ body .logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 20%;
+  width: 30%;
+}
+@media screen and (min-width: 500px) {
+  body .logo {
+    width: 20%;
+  }
 }
 body .logo a {
-  margin-top: 5px;
+  margin: 10px;
   width: 60%;
   text-decoration: none;
   /*image logo*/
+}
+@media screen and (min-width: 500px) {
+  body .logo a {
+    width: 80%;
+  }
 }
 body .logo a h3 {
   margin-top: 0px;
@@ -288,11 +300,9 @@ body #recherche-filtres label span {
 body #recherche-filtres input {
   border: 0;
   /* gras*/
-  font-weight: bold;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  font-family: "Roboto";
   background-color: #d8d2d2;
   -webkit-box-shadow: 50 80px 16px 80 rgba(7, 0, 8, 0.2);
           box-shadow: 50 80px 16px 80 rgba(7, 0, 8, 0.2);
@@ -314,7 +324,7 @@ body #recherche-filtres ::-webkit-input-placeholder {
   opacity: 1;
   text-align: center;
   font-family: "Roboto";
-  font-weight: bold;
+  font-weight: 600;
   font-size: 4vmin;
 }
 body #recherche-filtres ::-moz-placeholder {
@@ -322,7 +332,7 @@ body #recherche-filtres ::-moz-placeholder {
   opacity: 1;
   text-align: center;
   font-family: "Roboto";
-  font-weight: bold;
+  font-weight: 600;
   font-size: 4vmin;
 }
 body #recherche-filtres :-ms-input-placeholder {
@@ -330,7 +340,7 @@ body #recherche-filtres :-ms-input-placeholder {
   opacity: 1;
   text-align: center;
   font-family: "Roboto";
-  font-weight: bold;
+  font-weight: 600;
   font-size: 4vmin;
 }
 body #recherche-filtres ::-ms-input-placeholder {
@@ -338,7 +348,7 @@ body #recherche-filtres ::-ms-input-placeholder {
   opacity: 1;
   text-align: center;
   font-family: "Roboto";
-  font-weight: bold;
+  font-weight: 600;
   font-size: 4vmin;
 }
 body #recherche-filtres ::placeholder {
@@ -346,7 +356,7 @@ body #recherche-filtres ::placeholder {
   opacity: 1;
   text-align: center;
   font-family: "Roboto";
-  font-weight: bold;
+  font-weight: 600;
   font-size: 4vmin;
 }
 body #recherche-filtres .container1 {
@@ -371,22 +381,24 @@ body #recherche-filtres .container1 h1.h1_index {
   width: 80%;
   font-size: 8vmin;
   font-family: "Roboto";
-  font-weight: bolder;
-  margin: auto;
+  margin: 30px;
 }
 @media screen and (min-width: 500px) {
   body #recherche-filtres .container1 h1.h1_index {
-    margin: 5%;
+    margin: 3%;
+    width: 95%;
   }
 }
 body #recherche-filtres .container1 h2.h2_index {
   font-size: 5vmin;
   font-weight: lighter;
   font-family: "Roboto";
+  margin: 25px;
 }
 @media screen and (min-width: 500px) {
   body #recherche-filtres .container1 h2.h2_index {
     margin: 5%;
+    width: 90%;
   }
 }
 body #recherche-filtres .container1 button.explorer {
@@ -436,17 +448,8 @@ body #recherche-filtres .container2 .fx:hover {
 }
 @media screen and (min-width: 500px) {
   body #recherche-filtres .container2 .fx {
-    color: #9356DC;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    padding: 50px 10px 80px 10px;
   }
 }
 body #recherche-filtres .container2 .filtres ul {
@@ -472,8 +475,8 @@ body #recherche-filtres .container2 .filtres ul li {
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   border: none;
   border-radius: 22px;
-  margin: 20px;
-  padding: 0px;
+  margin: 5px 5px 20px 5px;
+  padding: 10px;
   cursor: pointer;
   background-color: whitesmoke;
   /*icône chiffre*/
@@ -486,7 +489,7 @@ body #recherche-filtres .container2 .filtres ul li:hover {
 }
 @media screen and (min-width: 500px) {
   body #recherche-filtres .container2 .filtres ul li {
-    margin-top: 5%;
+    margin-left: 5%;
   }
 }
 body #recherche-filtres .container2 .filtres ul li div .icone {
@@ -499,13 +502,14 @@ body #recherche-filtres .container2 .filtres ul li div .icone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 8px;
   /* Hauteur des icônes*/
   height: calc(100% + 0.9rem);
   /* Centrer les icônes horizontalement*/
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 3vmax;
+  width: 4vmax;
 }
 @media screen and (min-width: 500px) {
   body #recherche-filtres .container2 .filtres ul li div .icone {
@@ -513,7 +517,7 @@ body #recherche-filtres .container2 .filtres ul li div .icone {
   }
 }
 body #recherche-filtres .container2 .filtres ul li span {
-  width: 69vw;
+  width: 95vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -521,7 +525,7 @@ body #recherche-filtres .container2 .filtres ul li span {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  right: 35px;
+  right: 5px;
   font-family: "Roboto";
   font-weight: bolder;
   /*icone smartphone...*/
@@ -546,17 +550,7 @@ body h2.resto {
 }
 @media screen and (min-width: 500px) {
   body h2.resto {
-    color: #9356DC;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    padding: 50px 10px 80px 10px;
   }
 }
 body main.accueil .cards {
@@ -565,6 +559,7 @@ body main.accueil .cards {
   /*bouton nouveau*/
 }
 body main.accueil .cards div.card {
+  position: relative;
   padding-bottom: 10px;
   height: 210px;
   width: 80%;
@@ -608,6 +603,7 @@ body main.accueil .cards div.card .container {
 }
 body main.accueil .cards div.card p.content {
   margin: 0px;
+  padding-bottom: 3px;
   width: 100%;
 }
 @media screen and (min-width: 500px) {
@@ -620,6 +616,7 @@ body main.accueil .cards div.card p {
   width: 100%;
   font-size: 3vmax;
   font-family: "Roboto";
+  font-weight: 500;
 }
 body main.accueil .cards div.card .span {
   display: -webkit-box;
@@ -632,6 +629,7 @@ body main.accueil .cards div.card .span {
 body main.accueil .cards div.card h4 {
   margin: 0px 0px 10px 10px;
   min-width: 48%;
+  font-family: "Roboto";
   font-size: 3.5vmax;
 }
 body main.accueil .cards div.card .fa-heart {
@@ -655,9 +653,10 @@ body main.accueil .cards div.card i {
 }
 body main.accueil .cards .Nouveau {
   min-height: 30px;
-  position: relative;
-  bottom: 200px;
-  left: 215px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
   padding: 0px 5px 0px 5px;
   background-color: #99E2D0;
   cursor: pointer;
@@ -689,13 +688,25 @@ body .main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 102%;
+  min-width: 102%;
   position: relative;
   bottom: 50px;
   /*titre des menus*/
   /*titre :entrées, plats, dessert*/
   /*bouton des menus*/
-  /*bouton commander*/
+}
+@media screen and (min-width: 700px) {
+  body .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 body .main div.title {
   width: 90%;
@@ -857,85 +868,115 @@ body .main .boutton01 .fa-check-circle {
         align-content: center;
   }
 }
-body .main .menus {
-  position: relative;
-  right: 10px;
-  width: 92%;
-  max-height: 80px;
+body .main .container_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: none;
-  border-radius: 10px;
-  margin: 20px;
-  padding: 6px 6px 6px 6px;
-  cursor: pointer;
   background-color: white;
-  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  font-size: 3.5vmin;
-  z-index: 0;
+  border: none;
+  padding: 6px 0px 0px 10px;
+  font-size: 3vmax;
+  border-radius: 15px;
+  -webkit-box-shadow: -1px 2px 10px #0000002e;
+          box-shadow: -1px 2px 10px #0000002e;
+  margin: 10px;
+  margin-bottom: 10px;
+  position: relative;
   overflow: hidden;
-  -webkit-transition: padding-right 300ms ease-in-out;
-  transition: padding-right 300ms ease-in-out;
 }
-body .main .menus:hover .check {
+@media screen and (min-width: 700px) {
+  body .main .container_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    min-width: 60vmax;
+  }
+}
+body .main .container_menu:hover .check {
   opacity: 1;
-  -webkit-transform: translate(-50px);
-          transform: translate(-50px);
+  -webkit-transform: translate(-96px);
+          transform: translate(-96px);
 }
-body .main .menus:hover .fa-check-circle {
+body .main .container_menu:hover .fa-check-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
+  -webkit-transition: -webkit-transform 600ms ease-in-out;
+  transition: -webkit-transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out, -webkit-transform 600ms ease-in-out;
+}
+body .main .container_menu:hover .prix {
+  position: absolute;
+  left: 0;
+  margin-left: 40vmax;
+}
+body .main .container_menu:hover .overflow-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 5px;
+}
+body .main .container_menu:hover .description_prix {
+  width: 10px;
+}
+body .main p {
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+}
+body .main .prix {
+  margin-left: 2vmax;
+}
+body .main h4.menu {
+  margin: 0px;
+  font-family: "Roboto";
+}
+body .main .description_prix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Roboto";
+  font-size: normal;
+  width: 80%;
+  max-width: 77%;
+  position: relative;
+}
+body .main .overflow-ellipsis {
+  min-width: 255px;
 }
 body .main .check {
+  position: absolute;
+  top: -0.3px;
+  right: -96px;
+  background-color: #99E2D0;
+  color: white;
+  min-width: 50px;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 1.4px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #99E2D0;
-  width: 50px;
-  height: 100%;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  position: absolute;
-  padding: 20px;
-  right: -50px;
-  top: 0;
   opacity: 0;
-  -webkit-transition: -webkit-transform 330ms ease-in-out;
-  transition: -webkit-transform 330ms ease-in-out;
-  transition: transform 330ms ease-in-out;
-  transition: transform 330ms ease-in-out, -webkit-transform 330ms ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-body .main .check .fa-check-circle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  color: transparent;
-  color: white;
-  overflow: hidden;
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
-}
-body .main button.Commander {
+body button.Commander {
   font-size: 2vmax;
   margin: 50px 50px 100px 80px;
   width: 50%;
@@ -948,13 +989,13 @@ body .main button.Commander {
   cursor: pointer;
 }
 @media screen and (min-width: 771px) {
-  body .main button.Commander {
+  body button.Commander {
     margin-left: 23vw;
     width: 50%;
     margin-top: 80px;
   }
 }
-body .main button.Commander:hover {
+body button.Commander:hover {
   -webkit-box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
 }
