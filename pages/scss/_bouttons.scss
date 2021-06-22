@@ -116,7 +116,7 @@ ___________________________________*/
     position: absolute;
     left:  0;
     margin-left: 39vmax;
-    @media screen and (min-width:500px){
+    @media screen and (min-width:476px){
         margin-left: 65vmax;
     }
     
@@ -144,8 +144,8 @@ ___________________________________*/
         overflow: hidden;
     }
     .prix{
-    margin-left: 1.5vmax;
-    @media screen and (min-width:500px) {
+    margin-left: 1vmax;
+    @media screen and (min-width:476px) {
         margin-left: 1px;
     }
 
@@ -163,17 +163,16 @@ ___________________________________*/
     display: flex;
     justify-content: space-between;
     font-family: 'Roboto';
-    font-size: normal;
     width: 80%;
     max-width:87%;
     position: relative;
-    @media  screen and (min-width:500px) {
+    @media  screen and (min-width:476px) {
         max-width: 650px;
     }
     }
     .overflow-ellipsis{
-    min-width:48vmax;
-    @media  screen and (min-width:500px) {
+    min-width:45vmax;
+    @media  screen and (min-width:476px) {
         min-width: 70vmax;
     }
     }
