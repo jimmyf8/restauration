@@ -4,14 +4,20 @@
 loader
 _______________________________________*/
 
+
+
+
 @mixin loader {
     .cs-loader {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
+        position:fixed;
+        bottom: 0;
+        background-color: $primary_color;
+        display: flex;
         width: 100%;
-        background-color: rgb(192, 62, 224);
+        height: 100%;
+        z-index: 1;
+        animation: lol 4s linear forwards;
+       
     }
       
     .cs-loader-inner {
@@ -25,29 +31,24 @@ _______________________________________*/
     }
       
     .cs-loader-inner label {
-        font-size: 20px;
+        font-size: 5vmax;
         opacity: 0;
         display:inline-block;
-        background: violet;
+        background: rgb(4, 4, 4);
     }
     
     /*animation lol*/
     @keyframes lol {
         0% {
-          opacity: 0;
+         
+          opacity: 1;
           transform: translateX(-300px);
         }
-        33% {
-          opacity: 1;
-          transform: translateX(0px);
-        }
-        66% {
-          opacity: 1;
-          transform: translateX(0px);
-        }
+       
         100% {
           opacity: 0;
           transform: translateX(300px);
+          visibility: hidden;
         }
     }
     .cs-loader-inner label:nth-child(10) {

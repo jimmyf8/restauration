@@ -18,10 +18,10 @@ HOME, PAGE  2,3,4,5 LAYOUT & GENERAL
 body{
 
     margin:0 auto;
-   
-    
     /*loader*/
     @include loader;
+   
+ 
 
     height: 100vh;
     /*logo*/
@@ -203,7 +203,7 @@ body{
             width: 100%;
             background-color: transparent;
             div.card {
-                
+            transform: scale(1);
                position: relative;
                padding-bottom: 10px;
                height: 210px;
@@ -222,6 +222,8 @@ body{
               
                &:hover{
                    box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2);
+                   transform: scale(1.1);
+                   transition: 500ms;
                }
              
                 img{
