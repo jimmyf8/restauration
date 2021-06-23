@@ -640,7 +640,7 @@ body .recherche-filtres .container2 .filtres ul li:hover {
 @media screen and (min-width: 500px) {
   body .recherche-filtres .container2 .filtres ul li {
     margin: 5%;
-    min-width: 50%;
+    min-width: 92%;
   }
 }
 body .recherche-filtres .container2 .filtres ul li div .icone {
@@ -653,7 +653,7 @@ body .recherche-filtres .container2 .filtres ul li div .icone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 2px;
+  margin-right: 8px;
   /* Hauteur des icônes*/
   height: calc(100% + 0.9);
   /* Centrer les icônes horizontalement*/
@@ -664,16 +664,16 @@ body .recherche-filtres .container2 .filtres ul li div .icone {
 }
 @media screen and (min-width: 500px) {
   body .recherche-filtres .container2 .filtres ul li div .icone {
-    width: 4vmin;
-    height: 2vmax;
+    width: 6vmin;
+    height: 3vmax;
   }
 }
 body .recherche-filtres .container2 .filtres ul li div .filtre {
-  width: 90vw;
+  width: 70vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 30px;
+  margin-right: 90px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -686,11 +686,12 @@ body .recherche-filtres .container2 .filtres ul li div .filtre {
   body .recherche-filtres .container2 .filtres ul li div .filtre {
     min-width: 60vw;
     font-size: 5vmin;
-    margin-right: 300px;
+    margin-right: 100px;
   }
 }
 body .recherche-filtres .container2 .filtres ul li div .filtre i {
   color: #999999;
+  margin-right: 2px;
 }
 body .recherche-filtres .container2 .filtres ul li div .filtre i:hover {
   color: #9356DC;
@@ -761,7 +762,7 @@ body main.accueil .cards div.card img {
   min-height: 70%;
 }
 body main.accueil .cards div.card .container {
-  width: 180%;
+  width: 195%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -769,16 +770,25 @@ body main.accueil .cards div.card .container {
       flex-wrap: wrap;
   text-decoration: none;
 }
-body main.accueil .cards div.card p.content {
+body main.accueil .cards div.card div.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0px;
   padding-bottom: 4px;
-  width: 100%;
+  width: 50%;
   text-decoration: none;
 }
 @media screen and (min-width: 500px) {
-  body main.accueil .cards div.card p.content {
+  body main.accueil .cards div.card div.content {
     margin: 10px;
   }
+}
+body main.accueil .cards div.card div.content2 {
+  margin-left: 10px;
 }
 body main.accueil .cards div.card p {
   margin: 0px 0px 0px 10px;
