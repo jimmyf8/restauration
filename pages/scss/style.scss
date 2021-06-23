@@ -1,4 +1,4 @@
-/* HOME:LIGNE 54
+/* HOME:LIGNE 65
    PAGE 2,3,4,5: LIGNE 285
 */
 
@@ -16,13 +16,10 @@ HOME, PAGE  2,3,4,5 LAYOUT & GENERAL
 ***************************************/
 
 body{
-
+    width:100%;
     margin:0 auto;
     /*loader*/
     @include loader;
-   
- 
-
     height: 100vh;
     /*logo*/
     .logo{
@@ -175,6 +172,12 @@ body{
                     font-size: 5vmin;
                     margin-right: 100px;
                 }
+
+                .content2{
+                    @media screen and (min-width:500px) {
+                        margin-left: 20px;
+                    }
+                }
                 /*icone smartphone...*/
                 i{
                 color: #999999;
@@ -189,9 +192,9 @@ body{
                 font-family: 'Roboto';
                 font-weight: bolder;
                 margin-right: 20px;
-            
-                
-                
+                @media screen and (min-width:500px) {
+                    margin-left: 70px;
+                }
                 }
                 }
                 }

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* HOME:LIGNE 54
+/* HOME:LIGNE 65
    PAGE 2,3,4,5: LIGNE 285
 */
 /**********************
@@ -22,6 +22,8 @@ UTILITAIRES POSITION / DIMENSIONS
 /*radius bouton*/
 /*padding texte*/
 /*border radius*/
+/*recherche: ligne103
+  footer:ligne 170*/
 /*______________________________________
 loader
 _______________________________________*/
@@ -215,7 +217,7 @@ h4.menu {
 }
 
 /*__________________________________
-Titre
+Titres
 ____________________________________/
 
 /*titre fonctionnement*/
@@ -228,6 +230,7 @@ ____________________________________/
 HOME, PAGE  2,3,4,5 LAYOUT & GENERAL
 ***************************************/
 body {
+  width: 100%;
   margin: 0 auto;
   /*loader*/
   /*animation lol*/
@@ -689,6 +692,11 @@ body .recherche-filtres .container2 .filtres ul li div .filtre {
     margin-right: 100px;
   }
 }
+@media screen and (min-width: 500px) {
+  body .recherche-filtres .container2 .filtres ul li div .filtre .content2 {
+    margin-left: 20px;
+  }
+}
 body .recherche-filtres .container2 .filtres ul li div .filtre i {
   color: #999999;
   margin-right: 2px;
@@ -702,6 +710,11 @@ body .recherche-filtres .container2 .filtres ul li div .filtre p {
   font-family: "Roboto";
   font-weight: bolder;
   margin-right: 20px;
+}
+@media screen and (min-width: 500px) {
+  body .recherche-filtres .container2 .filtres ul li div .filtre p {
+    margin-left: 70px;
+  }
 }
 body h2.resto {
   margin: 10px 10px 10px 10px;
