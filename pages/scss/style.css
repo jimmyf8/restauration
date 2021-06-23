@@ -640,7 +640,7 @@ body .recherche-filtres .container2 .filtres ul li:hover {
 @media screen and (min-width: 500px) {
   body .recherche-filtres .container2 .filtres ul li {
     margin: 5%;
-    width: 90%;
+    min-width: 50%;
   }
 }
 body .recherche-filtres .container2 .filtres ul li div .icone {
@@ -684,7 +684,7 @@ body .recherche-filtres .container2 .filtres ul li div .filtre {
 }
 @media screen and (min-width: 500px) {
   body .recherche-filtres .container2 .filtres ul li div .filtre {
-    width: 70vw;
+    min-width: 60vw;
     font-size: 5vmin;
     margin-right: 300px;
   }
