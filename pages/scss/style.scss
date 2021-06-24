@@ -2,11 +2,11 @@
    PAGE 2,3,4,5: LIGNE 285
 */
 
-@import './_variables';
-@import './_mixins';
-@import './_position';
-@import './_bouttons';
-@import './_titres';
+@import 'mixins/./_variables';
+@import 'mixins/./_mixins';
+@import 'mixins/./_position';
+@import 'mixins/./_bouttons';
+@import 'mixins/./_titres';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
@@ -83,9 +83,9 @@ body{
     text-align: center;
     background-color: $background_color_container1;
     width: 100%;
-    height: auto;
+    min-height: 300px;
     @media screen and (min-width:500px){
-        padding-bottom: 0px;
+        padding-bottom: 90px;
     }
          
     /*Réservez le menu...*/
@@ -330,6 +330,7 @@ body{
 
 
    header{
+    background-color: transparent;   
     /*image header*/
     div.image img{
     height: 200px;
@@ -363,7 +364,7 @@ body{
   
     /*titre :entrées, plats, dessert*/
     h2{
-     border-bottom: solid 1px $tertiary_color;
+     border-bottom: solid 2px $tertiary_color;
      width: 10%;
      max-width: 15%;
      font-family:'Roboto' ;
@@ -372,7 +373,7 @@ body{
      @media screen and (min-width:500px){
      width: 5%;
      max-width: 5%;
-     border-bottom: solid 1px $tertiary_color;
+     border-bottom: solid 2px $tertiary_color;
     }
     }
 

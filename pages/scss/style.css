@@ -22,11 +22,40 @@ UTILITAIRES POSITION / DIMENSIONS
 /*radius bouton*/
 /*padding texte*/
 /*border radius*/
-/*recherche: ligne103
-  footer:ligne 170*/
+/*recherche: ligne 119
+  footer:ligne 185
+  animations: ligne 40
+  */
 /*______________________________________
 loader
 _______________________________________*/
+/*animation slidedown*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@-webkit-keyframes slidedown {
+  from {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slidedown {
+  from {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
 /*_____________________________________________
 recherche
 ______________________________________________*/
@@ -35,8 +64,6 @@ ______________________________________________*/
 footer
 _________________________________*/
 /*border-top*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 /*_________________________________
 Position
 ___________________________________/
@@ -44,7 +71,7 @@ ___________________________________/
 /*padding*/
 /*margin*/
 /*centrer*/
-/*boutton menu: ligne 77*/
+/*boutton menu: ligne 71*/
 /*_________________________________
 Boutton accueil
 ___________________________________*/
@@ -56,6 +83,8 @@ Bouttons menus
 ___________________________________*/
 /*bouton des menus*/
 .container_menu {
+  -webkit-animation: slidedown 5s;
+          animation: slidedown 5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,7 +151,14 @@ ___________________________________*/
 .container_menu:hover h4.menu {
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 5px;
+  width: 35px;
+}
+@media screen and (min-width: 476px) {
+  .container_menu:hover h4.menu {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 500px;
+  }
 }
 
 .container_menu:hover .description_prix {
@@ -146,13 +182,15 @@ p {
 }
 
 h4.menu {
+  white-space: nowrap;
+  overflow: hidden;
   margin: 0px;
   font-family: "Roboto";
   min-width: 205px;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 476px) {
   h4.menu {
-    max-width: 600px;
+    min-width: 200px;
   }
 }
 
@@ -233,6 +271,9 @@ body {
   width: 100%;
   margin: 0 auto;
   /*loader*/
+  /*______________________________________
+   animations
+  _______________________________________*/
   /*animation lol*/
   height: 100vh;
   /*logo*/
@@ -282,26 +323,18 @@ body .cs-loader-inner label {
 @-webkit-keyframes lol {
   0% {
     opacity: 1;
-    -webkit-transform: translateX(-300px);
-            transform: translateX(-300px);
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateX(300px);
-            transform: translateX(300px);
     visibility: hidden;
   }
 }
 @keyframes lol {
   0% {
     opacity: 1;
-    -webkit-transform: translateX(-300px);
-            transform: translateX(-300px);
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateX(300px);
-            transform: translateX(300px);
     visibility: hidden;
   }
 }
@@ -517,14 +550,14 @@ body .recherche-filtres .container1 {
   text-align: center;
   background-color: #f3f2f2;
   width: 100%;
-  height: auto;
+  min-height: 300px;
   /*Réservez le menu...*/
   /*Découvrez des restaurants...*/
   /*boutton explorer*/
 }
 @media screen and (min-width: 500px) {
   body .recherche-filtres .container1 {
-    padding-bottom: 0px;
+    padding-bottom: 90px;
   }
 }
 body .recherche-filtres .container1 h1.h1_index {
@@ -859,6 +892,7 @@ body main.accueil .cards .Nouveau {
   font-size: 4vmin;
 }
 body header {
+  background-color: transparent;
   /*image header*/
 }
 body header div.image img {
@@ -937,7 +971,7 @@ body .main div.title i {
   font-size: 6vmin;
 }
 body .main h2 {
-  border-bottom: solid 1px #99E2D0;
+  border-bottom: solid 2px #99E2D0;
   width: 10%;
   max-width: 15%;
   font-family: "Roboto";
@@ -948,13 +982,13 @@ body .main h2 {
   body .main h2 {
     width: 5%;
     max-width: 5%;
-    border-bottom: solid 1px #99E2D0;
+    border-bottom: solid 2px #99E2D0;
   }
 }
 body .main button.Commander {
   font-size: 2vmax;
   margin: 50px 50px 100px 80px;
-  width: 50%;
+  min-width: 50%;
   background: -webkit-gradient(linear, left bottom, left top, from(#d629e6), to(#a677cc));
   background: linear-gradient(0deg, #d629e6 0%, #a677cc 100%);
   border: none;
@@ -963,15 +997,8 @@ body .main button.Commander {
   color: white;
   cursor: pointer;
 }
-@media screen and (min-width: 771px) {
-  body .main button.Commander {
-    width: 150%;
-    margin-left: 12vw;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
-}
 body .main button.Commander:hover {
+  background: #bf71d8;
   -webkit-box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
 }

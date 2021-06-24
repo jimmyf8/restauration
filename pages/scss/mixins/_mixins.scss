@@ -1,5 +1,7 @@
-/*recherche: ligne103
-  footer:ligne 170*/
+/*recherche: ligne 119
+  footer:ligne 185
+  animations: ligne 40
+  */
 
 
 /*______________________________________
@@ -36,18 +38,18 @@ _______________________________________*/
         display:inline-block;
         background: rgb(4, 4, 4);
     }
+ /*______________________________________
+  animations
+ _______________________________________*/ 
     
     /*animation lol*/
     @keyframes lol {
         0% {
-         
           opacity: 1;
-          transform: translateX(-300px);
         }
        
         100% {
           opacity: 0;
-          transform: translateX(300px);
           visibility: hidden;
         }
     }
@@ -101,7 +103,18 @@ _______________________________________*/
     }
 }
 
-
+/*animation slidedown*/
+@keyframes slidedown {
+    from{
+        transform:translateY(200px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity: 1;
+    }   
+    
+}
 /*_____________________________________________
 recherche
 ______________________________________________*/
