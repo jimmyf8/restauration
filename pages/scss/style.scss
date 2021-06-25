@@ -2,6 +2,7 @@
    PAGE 2,3,4,5: LIGNE 350
 */
 
+/*intégrationdes mixins*/
 @import 'mixins/./_variables';
 @import 'mixins/./_mixins';
 @import 'mixins/./_position';
@@ -20,12 +21,8 @@ body{
     /*loader*/
     @include loader;
     height: 100vh;
-    margin: auto;
     
    
-    
-   
-
     /*logo*/
     .logo{
        @include flexMid;
@@ -261,7 +258,7 @@ body{
 
                 /*block description*/
                 .container{
-                    width: 195%;
+                    width: 100%;
                     max-height: 150px;
                     display: flex;
                     flex-wrap: wrap;
