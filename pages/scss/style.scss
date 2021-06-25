@@ -1,5 +1,5 @@
-/* HOME:LIGNE 65
-   PAGE 2,3,4,5: LIGNE 285
+/* HOME:LIGNE 73
+   PAGE 2,3,4,5: LIGNE 350
 */
 
 @import 'mixins/./_variables';
@@ -8,27 +8,37 @@
 @import 'mixins/./_bouttons';
 @import 'mixins/./_titres';
 
+/*police*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 /**************************************
-HOME, PAGE  2,3,4,5 LAYOUT & GENERAL
+HOME, PAGE  2,3,4,5 
 ***************************************/
 
 body{
-    width:100%;
-    margin:0 auto;
     /*loader*/
     @include loader;
     height: 100vh;
+    margin: auto;
+    
+   
+    
+   
+
     /*logo*/
     .logo{
        @include flexMid;
         width: 30%;
         @media screen and (min-width:500px){
         width: 80%;
-      
         } 
+
+        /*flèche*/
+        i{
+            font-size: 2vmax;
+        }
+
         a{
         margin: 10px;
         width: 60%;
@@ -37,6 +47,7 @@ body{
         @media screen and (min-width:500px){
         width: 70%;
         }    
+
         h3{
             margin-top: 0px;
         }
@@ -68,22 +79,23 @@ body{
     .recherche-filtres{
     height: auto;
     .form{
-    width: 100%; 
+    min-width: 100%; 
     }
     .recherche{
     border-top: 2px solid rgba(0,0,0,0.2);
     }
 
    /*barre de recherche*/
-   @include search;   
-    /*recherche slogan boutton*/
+   @include search; 
+
+    /*recherche-slogan-boutton*/
     .container1{
     display: block;
     align-items: center;
     text-align: center;
     background-color: $background_color_container1;
     width: 100%;
-    min-height: 300px;
+    min-height: 330px;
     @media screen and (min-width:500px){
         padding-bottom: 90px;
     }
@@ -136,7 +148,6 @@ body{
                 @media screen and (min-width:500px){
                 margin: 5%;
                 min-width: 92%;
-
                 }
 
                 /*icône chiffre*/
@@ -155,14 +166,14 @@ body{
                 @media screen and (min-width:500px){
                 width: 6vmin;
                 height: 3vmax;
+                }            
                 }
-                            
-                }
+
                 /*filtres fonctionnement*/
                 div .filtre{
-                width: 70vw;
+                width: 78vw;
                 display: flex;
-                margin-right: 90px;
+                margin-right: 55px;
                 justify-content: space-between;
                 position: relative;
                 font-family: 'Roboto';
@@ -172,12 +183,9 @@ body{
                     font-size: 5vmin;
                     margin-right: 100px;
                 }
+                
+                
 
-                .content2{
-                    @media screen and (min-width:500px) {
-                        margin-left: 20px;
-                    }
-                }
                 /*icone smartphone...*/
                 i{
                 color: #999999;
@@ -191,7 +199,8 @@ body{
                 font-size: 5vmin;
                 font-family: 'Roboto';
                 font-weight: bolder;
-                margin-right: 20px;
+                margin-right: 10px;
+            
                 @media screen and (min-width:500px) {
                     margin-left: 70px;
                 }
@@ -207,7 +216,7 @@ body{
     @include resto;
 
     main.accueil{
-    
+        /*cartes*/
         .cards{
             
             width: 100%;
@@ -219,8 +228,9 @@ body{
                height: 210px;
                width: 80%;
                min-width: 300px;
+               max-width: 2000px;
                min-height: 90px;
-               max-height: 800px ;
+               max-height: 3000px ;
                /* Add shadows to create the "card" effect */
                box-shadow: 0 4px 5px 0 rgba(0,0,0,0.2);
                transition: 0.3s;
@@ -235,19 +245,24 @@ body{
                    transform: scale(1.1);
                    transition: 500ms;
                }
-             
+
+                /*image carte*/
                 img{
                   border-top-left-radius: 22px;
                   border-top-right-radius: $border-radius;
                   height: 160px;
                   object-fit: cover;
                   width: 100%;
-                  max-width: 1800px;
+                  max-width: 3000px;
                   min-height: 70%;
+                  max-height: 8000px;
                   
                 }
+
+                /*block description*/
                 .container{
                     width: 195%;
+                    max-height: 150px;
                     display: flex;
                     flex-wrap: wrap;
                     text-decoration: none;
@@ -265,7 +280,15 @@ body{
                     margin:10px;   
                     }
                 }
-               
+
+                
+                .content2{
+                    @media screen and (min-width:500px) {
+                        margin-left: 20px;
+                    }
+                }
+
+                /*lieu*/
                 p{
                     margin: 0px 0px 0px 10px;
                     width: 100%;
@@ -284,6 +307,8 @@ body{
                     justify-content: space-between;
                     
                 }
+
+                /*restaurant*/
                 h4{ 
                     margin: 0px 0px 10px 10px;
                     min-width: 48%;

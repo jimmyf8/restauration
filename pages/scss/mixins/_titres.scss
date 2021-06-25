@@ -75,7 +75,7 @@ ____________________________________/
 /*titre*/
 @mixin réservez{
     h1.h1_index{
-    width: 80%;
+    width: 82%;
     font-size: 8vmin;
     font-family: 'Roboto';
     margin: 30px;
@@ -89,6 +89,7 @@ ____________________________________/
 /*découvrez des restaurants...*/
 @mixin découvrez{
     h2.h2_index{
+    width: 90%;
     font-size: 5vmin;
     font-weight: lighter;
     font-family: 'Roboto';

@@ -1,4 +1,4 @@
-/*recherche: ligne 119
+/*recherche: ligne 122
   footer:ligne 185
   animations: ligne 40
   */
@@ -126,47 +126,73 @@ ______________________________________________*/
 /*barre de recherche*/
 @mixin search{
     .form {
-    width: 100%;
+    min-width: 100%;
     border-width: 3px;
     display: flex;
     justify-content: center;
-    height: 2rem;
+    min-height: 2rem;
     @media screen and (min-width:500px) {
-    height: 4rem;  
+    min-height: 4rem;  
     }
     }
    
     .form label,.form button{
     align-items: center;
     display: flex;
-    width: 100%;
+    min-width: 97%;
     cursor: pointer;
-    padding: 1px;    
+    padding: 5px;
+    @media screen and (min-width:500px) {
+        min-width: 98%;  
+    }
+    @media screen and (min-width:700px) {
+        min-width: 100%;  
+        }
     }
        
     /*icône localistion*/
     label {
+        height: 5vmax;
+       
     background-color:$background_color;
     display: flex;
     justify-content: center;
+    @media screen and(min-width:476px) {
+        height: 8vmax; 
+    
+     }
     span{
         display: flex;
+        align-items: center;
+        height: 100%;
+        i{
+            font-size: 2vmax;
+            @media screen and(min-width:476px) {
+                height: 3.5vmax; 
+                
+            }
+        }
     }
     }
       
     /* champs de texte*/
     input {
+        
+        display: flex;
+        align-items: center;
     border: 0;
-    /* gras*/
-    
+    @media screen and(min-width:476px) {
+       height: 6.5vmax; 
+       width: 50vmax;
+    }
     flex: 1;
    
     background-color:$background_color;
 
-    width: 100%;
+    min-width: 100%;
     @media screen and (min-width:500px) {
-    height: 1.8rem;
-    width: 200px; 
+    min-height: 1.8rem;
+    min-width: 200px; 
     display: flex; 
     align-content: center;
     }

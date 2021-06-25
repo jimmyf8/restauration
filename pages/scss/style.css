@@ -1,6 +1,6 @@
 @charset "UTF-8";
-/* HOME:LIGNE 65
-   PAGE 2,3,4,5: LIGNE 285
+/* HOME:LIGNE 73
+   PAGE 2,3,4,5: LIGNE 350
 */
 /**********************
 COLOR
@@ -22,7 +22,7 @@ UTILITAIRES POSITION / DIMENSIONS
 /*radius bouton*/
 /*padding texte*/
 /*border radius*/
-/*recherche: ligne 119
+/*recherche: ligne 122
   footer:ligne 185
   animations: ligne 40
   */
@@ -111,7 +111,7 @@ ___________________________________*/
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 80vmax;
+    width: 68vmax;
     margin: 5%;
   }
 }
@@ -136,9 +136,29 @@ ___________________________________*/
   left: 0;
   margin-left: 39vmax;
 }
-@media screen and (min-width: 476px) {
+@media screen and (min-width: 320px) {
   .container_menu:hover .prix {
-    margin-left: 65vmax;
+    margin-left: 35vmax;
+  }
+}
+@media screen and (min-width: 352px) {
+  .container_menu:hover .prix {
+    margin-left: 41vmax;
+  }
+}
+@media screen and (min-width: 380px) {
+  .container_menu:hover .prix {
+    margin-left: 46vmax;
+  }
+}
+@media screen and (min-width: 507px) {
+  .container_menu:hover .prix {
+    margin-left: 60vmax;
+  }
+}
+@media screen and (min-width: 767px) {
+  .container_menu:hover .prix {
+    margin-left: 50vmax;
   }
 }
 
@@ -157,7 +177,7 @@ ___________________________________*/
   .container_menu:hover h4.menu {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 500px;
+    width: 2800px;
   }
 }
 
@@ -175,9 +195,19 @@ p {
 .prix {
   margin-left: 1vmax;
 }
-@media screen and (min-width: 476px) {
+@media screen and (min-width: 428px) {
   .prix {
-    margin-left: 1px;
+    margin-left: 80px;
+  }
+}
+@media screen and (min-width: 507px) {
+  .prix {
+    margin-left: 35vmax;
+  }
+}
+@media screen and (min-width: 767px) {
+  .prix {
+    margin-left: 15vmax;
   }
 }
 
@@ -213,11 +243,13 @@ h4.menu {
 }
 
 .overflow-ellipsis {
-  min-width: 45vmax;
+  min-width: 43.5vmax;
 }
-@media screen and (min-width: 476px) {
+@media screen and (min-width: 320px) {
   .overflow-ellipsis {
-    min-width: 70vmax;
+    min-width: 45vmax;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
 
@@ -264,18 +296,18 @@ ____________________________________/
 /*titre*/
 /*découvrez des restaurants...*/
 /*titre carte*/
+/*police*/
 /**************************************
-HOME, PAGE  2,3,4,5 LAYOUT & GENERAL
+HOME, PAGE  2,3,4,5 
 ***************************************/
 body {
-  width: 100%;
-  margin: 0 auto;
   /*loader*/
   /*______________________________________
    animations
   _______________________________________*/
   /*animation lol*/
   height: 100vh;
+  margin: auto;
   /*logo*/
   /**************************************
   HOME
@@ -393,11 +425,15 @@ body .logo {
       -ms-flex-align: center;
           align-items: center;
   width: 30%;
+  /*flèche*/
 }
 @media screen and (min-width: 500px) {
   body .logo {
     width: 80%;
   }
+}
+body .logo i {
+  font-size: 2vmax;
 }
 body .logo a {
   margin: 10px;
@@ -436,17 +472,17 @@ body .recherche-filtres {
   /*icône localistion*/
   /* champs de texte*/
   /* Exemple de ville*/
-  /*recherche slogan boutton*/
+  /*recherche-slogan-boutton*/
   /*block fonctionnement*/
 }
 body .recherche-filtres .form {
-  width: 100%;
+  min-width: 100%;
 }
 body .recherche-filtres .recherche {
   border-top: 2px solid rgba(0, 0, 0, 0.2);
 }
 body .recherche-filtres .form {
-  width: 100%;
+  min-width: 100%;
   border-width: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -454,11 +490,11 @@ body .recherche-filtres .form {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 2rem;
+  min-height: 2rem;
 }
 @media screen and (min-width: 500px) {
   body .recherche-filtres .form {
-    height: 4rem;
+    min-height: 4rem;
   }
 }
 body .recherche-filtres .form label, body .recherche-filtres .form button {
@@ -468,11 +504,22 @@ body .recherche-filtres .form label, body .recherche-filtres .form button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  min-width: 97%;
   cursor: pointer;
-  padding: 1px;
+  padding: 5px;
+}
+@media screen and (min-width: 500px) {
+  body .recherche-filtres .form label, body .recherche-filtres .form button {
+    min-width: 98%;
+  }
+}
+@media screen and (min-width: 700px) {
+  body .recherche-filtres .form label, body .recherche-filtres .form button {
+    min-width: 100%;
+  }
 }
 body .recherche-filtres label {
+  height: 5vmax;
   background-color: #d8d2d2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -481,24 +528,52 @@ body .recherche-filtres label {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (min-width: 476px) {
+  body .recherche-filtres label {
+    height: 8vmax;
+  }
+}
 body .recherche-filtres label span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+body .recherche-filtres label span i {
+  font-size: 2vmax;
+}
+@media screen and (min-width: 476px) {
+  body .recherche-filtres label span i {
+    height: 3.5vmax;
+  }
 }
 body .recherche-filtres input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 0;
-  /* gras*/
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   background-color: #d8d2d2;
-  width: 100%;
+  min-width: 100%;
+}
+@media screen and (min-width: 476px) {
+  body .recherche-filtres input {
+    height: 6.5vmax;
+    width: 50vmax;
+  }
 }
 @media screen and (min-width: 500px) {
   body .recherche-filtres input {
-    height: 1.8rem;
-    width: 200px;
+    min-height: 1.8rem;
+    min-width: 200px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -554,7 +629,7 @@ body .recherche-filtres .container1 {
   text-align: center;
   background-color: #f3f2f2;
   width: 100%;
-  min-height: 300px;
+  min-height: 330px;
   /*Réservez le menu...*/
   /*Découvrez des restaurants...*/
   /*boutton explorer*/
@@ -565,7 +640,7 @@ body .recherche-filtres .container1 {
   }
 }
 body .recherche-filtres .container1 h1.h1_index {
-  width: 80%;
+  width: 82%;
   font-size: 8vmin;
   font-family: "Roboto";
   margin: 30px;
@@ -577,6 +652,7 @@ body .recherche-filtres .container1 h1.h1_index {
   }
 }
 body .recherche-filtres .container1 h2.h2_index {
+  width: 90%;
   font-size: 5vmin;
   font-weight: lighter;
   font-family: "Roboto";
@@ -709,11 +785,11 @@ body .recherche-filtres .container2 .filtres ul li div .icone {
   }
 }
 body .recherche-filtres .container2 .filtres ul li div .filtre {
-  width: 70vw;
+  width: 78vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 90px;
+  margin-right: 55px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -729,11 +805,6 @@ body .recherche-filtres .container2 .filtres ul li div .filtre {
     margin-right: 100px;
   }
 }
-@media screen and (min-width: 500px) {
-  body .recherche-filtres .container2 .filtres ul li div .filtre .content2 {
-    margin-left: 20px;
-  }
-}
 body .recherche-filtres .container2 .filtres ul li div .filtre i {
   color: #999999;
   margin-right: 2px;
@@ -746,7 +817,7 @@ body .recherche-filtres .container2 .filtres ul li div .filtre p {
   font-size: 5vmin;
   font-family: "Roboto";
   font-weight: bolder;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 @media screen and (min-width: 500px) {
   body .recherche-filtres .container2 .filtres ul li div .filtre p {
@@ -764,6 +835,9 @@ body h2.resto {
     padding: 50px 10px 80px 10px;
   }
 }
+body main.accueil {
+  /*cartes*/
+}
 body main.accueil .cards {
   width: 100%;
   background-color: transparent;
@@ -777,8 +851,9 @@ body main.accueil .cards div.card {
   height: 210px;
   width: 80%;
   min-width: 300px;
+  max-width: 2000px;
   min-height: 90px;
-  max-height: 800px;
+  max-height: 3000px;
   /* Add shadows to create the "card" effect */
   -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
@@ -786,6 +861,10 @@ body main.accueil .cards div.card {
   transition: 0.3s;
   border-radius: 22px;
   margin: 10% auto;
+  /*image carte*/
+  /*block description*/
+  /*lieu*/
+  /*restaurant*/
   /*icône coeur*/
 }
 @media screen and (min-width: 500px) {
@@ -808,11 +887,13 @@ body main.accueil .cards div.card img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  max-width: 1800px;
+  max-width: 3000px;
   min-height: 70%;
+  max-height: 8000px;
 }
 body main.accueil .cards div.card .container {
   width: 195%;
+  max-height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -835,6 +916,11 @@ body main.accueil .cards div.card div.content {
 @media screen and (min-width: 500px) {
   body main.accueil .cards div.card div.content {
     margin: 10px;
+  }
+}
+@media screen and (min-width: 500px) {
+  body main.accueil .cards div.card .content2 {
+    margin-left: 20px;
   }
 }
 body main.accueil .cards div.card p {
