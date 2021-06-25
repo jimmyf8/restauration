@@ -908,7 +908,6 @@ body main.accueil .cards div.card img {
   max-height: 8000px;
 }
 body main.accueil .cards div.card .container {
-  width: 100%;
   max-height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -926,7 +925,7 @@ body main.accueil .cards div.card div.content {
           justify-content: space-between;
   margin: 0px;
   padding-bottom: 4px;
-  width: 50%;
+  width: 95%;
   text-decoration: none;
 }
 @media screen and (min-width: 500px) {
