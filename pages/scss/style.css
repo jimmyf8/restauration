@@ -138,6 +138,11 @@ ___________________________________*/
   left: 0;
   margin-left: 39vmax;
 }
+@media screen and (min-width: 290px) {
+  .container_menu:hover .prix {
+    margin-left: 30vmax;
+  }
+}
 @media screen and (min-width: 300px) {
   .container_menu:hover .prix {
     margin-left: 30vmax;
@@ -163,6 +168,11 @@ ___________________________________*/
     margin-left: 46vmax;
   }
 }
+@media screen and (min-width: 413px) {
+  .container_menu:hover .prix {
+    margin-left: 35vmax;
+  }
+}
 @media screen and (min-width: 507px) {
   .container_menu:hover .prix {
     margin-left: 60vmax;
@@ -183,6 +193,13 @@ ___________________________________*/
   text-overflow: ellipsis;
   white-space: nowrap;
   min-width: 36vmax;
+}
+@media screen and (min-width: 290px) {
+  .container_menu:hover .overflow-ellipsis {
+    min-width: 25vmax;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 @media screen and (min-width: 299px) {
   .container_menu:hover .overflow-ellipsis {
@@ -219,6 +236,11 @@ p {
 /*prix*/
 .prix {
   margin-left: 1vmax;
+}
+@media screen and (min-width: 290px) {
+  .prix {
+    margin-right: 1vmax;
+  }
 }
 @media screen and (min-width: 299px) {
   .prix {
@@ -286,6 +308,13 @@ h4.menu {
 /*détail entrée plat dessert*/
 .overflow-ellipsis {
   min-width: 43.5vmax;
+}
+@media screen and (min-width: 290px) {
+  .overflow-ellipsis {
+    min-width: 30vmax;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 @media screen and (min-width: 320px) {
   .overflow-ellipsis {

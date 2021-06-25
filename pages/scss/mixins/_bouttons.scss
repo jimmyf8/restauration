@@ -112,6 +112,9 @@ ___________________________________*/
     position: absolute;
     left:  0;
     margin-left: 39vmax;
+    @media screen and (min-width:290px){
+        margin-left: 30vmax;
+    }
     @media screen and (min-width:300px){
         margin-left: 30vmax;
     }
@@ -129,6 +132,10 @@ ___________________________________*/
     @media screen and (min-width:380px){
         margin-left: 46vmax;
     }
+    @media screen and (min-width:413px){
+        margin-left: 35vmax;
+    }
+   
     @media screen and (min-width:507px){
         margin-left: 60vmax;
     }
@@ -144,11 +151,17 @@ ___________________________________*/
     text-overflow: ellipsis;
     white-space: nowrap;
     min-width: 36vmax;
+    @media screen and (min-width:290px){
+        min-width: 25vmax;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
     @media screen and (min-width:299px){
         min-width: 30vmax;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+   
    
    
     }
@@ -166,7 +179,7 @@ ___________________________________*/
 
     .container_menu:hover .description_prix{
         width: 10px;
-   
+    
     }
     
 
@@ -180,9 +193,13 @@ ___________________________________*/
     /*prix*/
     .prix{
     margin-left: 1vmax;
+    @media screen and (min-width:290px){
+        margin-right: 1vmax;
+    }
     @media screen and (min-width:299px){
         margin-right: 2px;
     }
+
     @media screen and (min-width:370px){
         margin-left: 6vmax;
     }
@@ -227,6 +244,11 @@ ___________________________________*/
     /*détail entrée plat dessert*/
     .overflow-ellipsis{
     min-width:43.5vmax;
+    @media screen and (min-width:290px){
+        min-width: 30vmax;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
     @media  screen and (min-width:320px) {
         min-width: 45vmax;
         text-overflow: ellipsis;
@@ -237,6 +259,7 @@ ___________________________________*/
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+    
     }
 
     /*fond vert animation*/
