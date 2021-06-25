@@ -153,6 +153,11 @@ ___________________________________*/
     margin-left: 41vmax;
   }
 }
+@media screen and (min-width: 370px) {
+  .container_menu:hover .prix {
+    margin-left: 36vmax;
+  }
+}
 @media screen and (min-width: 380px) {
   .container_menu:hover .prix {
     margin-left: 46vmax;
@@ -218,6 +223,11 @@ p {
 @media screen and (min-width: 299px) {
   .prix {
     margin-right: 2px;
+  }
+}
+@media screen and (min-width: 370px) {
+  .prix {
+    margin-left: 6vmax;
   }
 }
 @media screen and (min-width: 428px) {

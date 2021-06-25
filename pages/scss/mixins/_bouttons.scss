@@ -121,6 +121,11 @@ ___________________________________*/
     @media screen and (min-width:352px){
         margin-left: 41vmax;
     }
+
+    @media screen and (min-width:370px){
+        margin-left: 36vmax;
+    }
+   
     @media screen and (min-width:380px){
         margin-left: 46vmax;
     }
@@ -144,6 +149,8 @@ ___________________________________*/
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+   
+   
     }
 
     .container_menu:hover h4.menu {
@@ -175,6 +182,9 @@ ___________________________________*/
     margin-left: 1vmax;
     @media screen and (min-width:299px){
         margin-right: 2px;
+    }
+    @media screen and (min-width:370px){
+        margin-left: 6vmax;
     }
     @media screen and (min-width:428px) {
         margin-left: 80px;
