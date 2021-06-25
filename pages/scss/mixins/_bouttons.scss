@@ -95,8 +95,9 @@ ___________________________________*/
         margin: 5%;
         
     }
-   
     }
+    
+    /*au survol*/
     .container_menu:hover .check {
     opacity: 1;
     transform: translate(-96px);
@@ -123,16 +124,20 @@ ___________________________________*/
     @media screen and (min-width:507px){
         margin-left: 60vmax;
     }
+    @media screen and (min-width:700px){
+        margin-left: 50vmax;
+    }
     @media screen and (min-width:767px){
         margin-left: 50vmax;
     }
-    
     }
+
     .container_menu:hover .overflow-ellipsis {
     text-overflow: ellipsis;
     white-space: nowrap;
     min-width: 36vmax;
     }
+
     .container_menu:hover h4.menu {
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -143,12 +148,12 @@ ___________________________________*/
             width: 2800px;
         }
     }
+
     .container_menu:hover .description_prix{
         width: 10px;
    
     }
     
-        
 
     p {
         font-size: 4.3vmin;
@@ -156,6 +161,8 @@ ___________________________________*/
         white-space: nowrap;
         overflow: hidden;
     }
+
+    /*prix*/
     .prix{
     margin-left: 1vmax;
     @media screen and (min-width:428px) {
@@ -164,12 +171,15 @@ ___________________________________*/
     @media screen and (min-width:507px){
         margin-left: 35vmax;
     }
+    @media screen and (min-width:700px){
+        margin-left: 10vmax;
+    }
     @media screen and (min-width:767px){
         margin-left: 15vmax;
     }
-
     }
 
+    /*nom entrée plat dessert*/
     h4.menu{
     white-space: nowrap;
     overflow: hidden;
@@ -180,6 +190,7 @@ ___________________________________*/
         min-width: 200px;
     }
     }
+    
     .description_prix{
     display: flex;
     justify-content: space-between;
@@ -191,6 +202,8 @@ ___________________________________*/
         max-width: 650px;
     }
     }
+
+    /*détail entrée plat dessert*/
     .overflow-ellipsis{
     min-width:43.5vmax;
     @media  screen and (min-width:320px) {
@@ -201,6 +214,7 @@ ___________________________________*/
     
     }
 
+    /*fond vert animation*/
     .check{
         position:absolute;
         top:-0.3px;
@@ -217,6 +231,7 @@ ___________________________________*/
         align-items: center;
         opacity: 0;
         transition: all .3s ease-in-out;
+        /*icône*/
         i{
             font-size: 4vmax;
         }

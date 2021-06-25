@@ -116,6 +116,7 @@ ___________________________________*/
   }
 }
 
+/*au survol*/
 .container_menu:hover .check {
   opacity: 1;
   -webkit-transform: translate(-96px);
@@ -156,6 +157,11 @@ ___________________________________*/
     margin-left: 60vmax;
   }
 }
+@media screen and (min-width: 700px) {
+  .container_menu:hover .prix {
+    margin-left: 50vmax;
+  }
+}
 @media screen and (min-width: 767px) {
   .container_menu:hover .prix {
     margin-left: 50vmax;
@@ -192,6 +198,7 @@ p {
   overflow: hidden;
 }
 
+/*prix*/
 .prix {
   margin-left: 1vmax;
 }
@@ -205,12 +212,18 @@ p {
     margin-left: 35vmax;
   }
 }
+@media screen and (min-width: 700px) {
+  .prix {
+    margin-left: 10vmax;
+  }
+}
 @media screen and (min-width: 767px) {
   .prix {
     margin-left: 15vmax;
   }
 }
 
+/*nom entrée plat dessert*/
 h4.menu {
   white-space: nowrap;
   overflow: hidden;
@@ -242,6 +255,7 @@ h4.menu {
   }
 }
 
+/*détail entrée plat dessert*/
 .overflow-ellipsis {
   min-width: 43.5vmax;
 }
@@ -253,6 +267,7 @@ h4.menu {
   }
 }
 
+/*fond vert animation*/
 .check {
   position: absolute;
   top: -0.3px;
@@ -276,6 +291,7 @@ h4.menu {
   opacity: 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  /*icône*/
 }
 .check i {
   font-size: 4vmax;
