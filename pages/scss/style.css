@@ -138,6 +138,11 @@ ___________________________________*/
   left: 0;
   margin-left: 39vmax;
 }
+@media screen and (min-width: 280px) {
+  .container_menu:hover .prix {
+    margin-left: 29vmax;
+  }
+}
 @media screen and (min-width: 290px) {
   .container_menu:hover .prix {
     margin-left: 30vmax;
@@ -194,6 +199,13 @@ ___________________________________*/
   white-space: nowrap;
   min-width: 36vmax;
 }
+@media screen and (min-width: 280px) {
+  .container_menu:hover .overflow-ellipsis {
+    min-width: 23vmax;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
 @media screen and (min-width: 290px) {
   .container_menu:hover .overflow-ellipsis {
     min-width: 25vmax;
@@ -213,6 +225,13 @@ ___________________________________*/
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 35px;
+}
+@media screen and (min-width: 280px) {
+  .container_menu:hover h4.menu {
+    min-width: 23vmax;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 @media screen and (min-width: 476px) {
   .container_menu:hover h4.menu {
@@ -237,6 +256,11 @@ p {
 .prix {
   margin-left: 1vmax;
 }
+@media screen and (min-width: 279px) {
+  .prix {
+    margin-left: 30px;
+  }
+}
 @media screen and (min-width: 290px) {
   .prix {
     margin-right: 1vmax;
@@ -249,7 +273,7 @@ p {
 }
 @media screen and (min-width: 370px) {
   .prix {
-    margin-left: 6vmax;
+    margin-left: 2vmax;
   }
 }
 @media screen and (min-width: 428px) {
@@ -279,7 +303,12 @@ h4.menu {
   overflow: hidden;
   margin: 0px;
   font-family: "Roboto";
-  min-width: 205px;
+  min-width: 190px;
+}
+@media screen and (min-width: 279px) {
+  h4.menu {
+    min-width: 200px;
+  }
 }
 @media screen and (min-width: 476px) {
   h4.menu {
@@ -308,6 +337,13 @@ h4.menu {
 /*détail entrée plat dessert*/
 .overflow-ellipsis {
   min-width: 43.5vmax;
+}
+@media screen and (min-width: 279px) {
+  .overflow-ellipsis {
+    min-width: 20vmax;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 @media screen and (min-width: 290px) {
   .overflow-ellipsis {
