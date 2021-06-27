@@ -140,7 +140,7 @@ ___________________________________*/
 }
 @media screen and (min-width: 280px) {
   .container_menu:hover .prix {
-    margin-left: 29vmax;
+    margin-left: 24vmax;
   }
 }
 @media screen and (min-width: 290px) {
@@ -173,19 +173,29 @@ ___________________________________*/
     margin-left: 36vmax;
   }
 }
+@media screen and (min-width: 375px) {
+  .container_menu:hover .prix {
+    margin-left: 30vmax;
+  }
+}
 @media screen and (min-width: 380px) {
   .container_menu:hover .prix {
     margin-left: 46vmax;
   }
 }
-@media screen and (min-width: 413px) {
+@media screen and (min-width: 410px) {
   .container_menu:hover .prix {
-    margin-left: 35vmax;
+    margin-left: 33vmax;
   }
 }
 @media screen and (min-width: 507px) {
   .container_menu:hover .prix {
     margin-left: 60vmax;
+  }
+}
+@media screen and (min-width: 540px) {
+  .container_menu:hover .prix {
+    margin-left: 45vmax;
   }
 }
 @media screen and (min-width: 700px) {
@@ -278,7 +288,7 @@ p {
 }
 @media screen and (min-width: 370px) {
   .prix {
-    margin-left: 90vmax;
+    margin-left: 9vmax;
   }
 }
 @media screen and (min-width: 428px) {
@@ -357,16 +367,23 @@ h4.menu {
     white-space: nowrap;
   }
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 299px) {
   .overflow-ellipsis {
-    min-width: 45vmax;
+    min-width: 35vmax;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 }
-@media screen and (min-width: 299px) {
+@media screen and (min-width: 320px) {
   .overflow-ellipsis {
     min-width: 35vmax;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width: 375px) {
+  .overflow-ellipsis {
+    min-width: 25vmax;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
