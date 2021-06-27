@@ -163,6 +163,11 @@ ___________________________________*/
     margin-left: 41vmax;
   }
 }
+@media screen and (min-width: 359px) {
+  .container_menu:hover .prix {
+    margin-left: 34vmax;
+  }
+}
 @media screen and (min-width: 370px) {
   .container_menu:hover .prix {
     margin-left: 36vmax;
@@ -237,7 +242,7 @@ ___________________________________*/
   .container_menu:hover h4.menu {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 2800px;
+    width: 280px;
   }
 }
 
@@ -266,14 +271,14 @@ p {
     margin-right: 1vmax;
   }
 }
-@media screen and (min-width: 299px) {
+@media screen and (min-width: 359px) {
   .prix {
-    margin-right: 2px;
+    margin-right: 50px;
   }
 }
 @media screen and (min-width: 370px) {
   .prix {
-    margin-left: 2vmax;
+    margin-left: 90vmax;
   }
 }
 @media screen and (min-width: 428px) {
