@@ -18,33 +18,57 @@ HOME, PAGE  2,3,4,5
 ***************************************/
 
 body{
-    /*loader*/
+    /*-------------------------------------------------loader*/
     @include loader;
     height: 100vh;
+    width: 100%;
+    @media screen and (max-width:100px){
+        width: 150px;
+    } 
     
    
-    /*logo*/
+    /*-------------------------------------------------logo*/
     .logo{
-       @include flexMid;
-        width: 30%;
-        @media screen and (min-width:500px){
-        width: 80%;
-        } 
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        position: relative;
 
-        /*flèche*/
+
+        /*------------------------------------------------flèche*/
         i{
             font-size: 2vmax;
+            position: absolute;
+            left: 2px;
         }
 
         a{
-        margin: 10px;
-        width: 60%;
-        text-decoration: none;
-        color: black;
-        @media screen and (min-width:500px){
-        width: 70%;
+            display: flex;
+            align-items: center;
+            height: 2rem;
+            font-size: 2vmax;
+            text-decoration: none;
+            color: black;
+            font-family: "Shrikhand"; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+            @media screen and (max-width:280px){
+                width: 100%;
+                font-size: 1vmax;
+            } 
+            @media screen and (max-width:320px){
+                
+                font-size: 1vmax;
+            } 
+          
         }    
-
+          h1{
+        font-family: "Shrikhand";
+       
+        
+    }  
         h3{
             margin-top: 0px;
         }
@@ -52,7 +76,7 @@ body{
          margin: 10%;
         }
 
-        /*image logo*/
+        /*-----------------------------------------------image logo*/
         img{
             width: 300%;
             margin-left: 15vw;
@@ -60,6 +84,7 @@ body{
             margin: 10%;
             width:50%;
             margin-left: 22.1vw;
+            
                 
         }
         }
@@ -72,20 +97,25 @@ body{
  ***************************************/ 
     
 
-    /*block recherche accueil*/
+    /*-----------------------------------block recherche accueil*/
     .recherche-filtres{
     height: auto;
     .form{
     min-width: 100%; 
     }
-    .recherche{
-    border-top: 2px solid rgba(0,0,0,0.2);
-    }
+  
 
-   /*barre de recherche*/
+   /*--------------------------------------------barre de recherche*/
    @include search; 
 
-    /*recherche-slogan-boutton*/
+    /*------------------------------------------------*recherche-slogan-boutton*/
+    .containers{
+        @media screen and (min-width:1000px){
+            display: flex;
+            flex-direction: row-reverse;
+            flex: 1;
+        } 
+    }
     .container1{
     display: block;
     align-items: center;
@@ -93,35 +123,61 @@ body{
     background-color: $background_color_container1;
     width: 100%;
     min-height: 330px;
+   
+    @media screen and (max-width:100px){
+        width: 100%;
+    } 
     @media screen and (min-width:500px){
         padding-bottom: 90px;
     }
-         
-    /*Réservez le menu...*/
+    @media screen and (min-width:1000px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 2;
+
+    }
+    
+    /*--------------------------------------------- titre réservez le menu...*/
     @include réservez;
 
-    /*Découvrez des restaurants...*/
+    /*----------------------------------------------titre découvrez des restaurants...*/
     @include découvrez;
 
-    /*boutton explorer*/
+    /*---------------------------------------------------boutton explorer*/
     button.explorer{
         @include explorer;
     } 
     }
         
-    /*block fonctionnement*/
+    /*--------------------------------------------block fonctionnement*/
     .container2{
     margin-top: 20%;
     background-color: #ffffff;
+    @media screen and (max-width:100px){
+        width: 100%;
+    } 
+    @media screen and (min-width:1000px){
+        padding-bottom: 10px;
+        flex: 1;
+        margin: 5vmin;
+       
+    }
 
-    /*fonctionnement*/
+    /*-------------------------------------------fonctionnement*/
     @include fonctionnement;
     
         .filtres{  
+            
+            max-width: 15500px;
+          
             ul {  
-            justify-content: center;
-            padding-left:0px;
-                    
+                 justify-content: center;
+                 padding-left:0px;
+                 display: flex;
+                 flex-direction: column;
+                
                 
                 li{ 
                 animation: slideDown 5s;
@@ -130,65 +186,158 @@ body{
                 justify-content: center;
                 flex-wrap: wrap;
                 width: 90%;
-                min-height: 10vmax;
+                height: 10vmax;
                 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
                 border: none;
                 border-radius: $border-radius;
                 margin: 5px 8px 20px 8px;
-                padding: 10px;
+                padding: 3px;
+
                 cursor: pointer;
                 background-color: $background-filtres;
                 &:hover{
                 box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2);
                 background-color: rgb(247, 222, 247);
                 }
-                @media screen and (min-width:500px){
-                margin: 5%;
-                min-width: 92%;
+                
+                @media screen and (max-width:242px){
+                    font-size: 10px;
                 }
-
-                /*icône chiffre*/
+                @media screen and (max-width:266px){
+                    width: 245px;
+                }
+                @media (min-width:267px) and (max-width:373px){
+                    justify-content: space-between;
+                    display:flex;
+                    width:263px;
+                }
+                @media screen and (min-width:768px){
+                
+                width: 97%;
+                height: 5vmax;
+                border-radius: 200px;
+                }
+                
+                /*---------------------------------------icône chiffre*/
                 div  .icone{
                 color: #ffffff;
                 align-items: center;
                 background-color: $primary_color;
                 border-radius: 22px;
                 display: flex;
-                margin-right: 8px;
+                margin-left: -1rem;
                 /* Hauteur des icônes*/
                 height: calc(100% + 0.9);
                 /* Centrer les icônes horizontalement*/
                 justify-content: center;
-                width: 4vmax;
-                @media screen and (min-width:500px){
-                width: 6vmin;
-                height: 3vmax;
-                }            
+                width: 3vmax;
+                
+                @media screen and (max-width:241px){
+                    margin-left: -1.1rem;
+                }    
+                @media screen and (max-width:255px){
+                    margin-left: 2px;
+                }    
+                 
+                @media (min-width:320px) and (max-width:424px){
+                    margin-left: -0.7rem;
+                }    
+                @media (min-width:425px) and (max-width:767px){
+                    margin-left: -4.8rem;
+                }    
+                @media screen and (min-width:768px){
+                width: 4vmin;
+                height: 4vmin;
+                }  
+                @media screen and (min-width:1235px){
+                font-size: 3vmax;
+                height: 100%;
+                width: 2.5vmax;
+                }  
+                  
+                @media screen and (min-width:2500px){
+                margin-left: -6rem;
+                font-size: 2vmax;
+                height: 100%;
+                width: 2vmax;
+                }    
+                        
                 }
-
-                /*filtres fonctionnement*/
+              
+                /*--------------------------------filtres largeur  texte*/
                 div .filtre{
-                width: 78vw;
+                width:15rem;
                 display: flex;
-                margin-right: 55px;
+                align-items: center;
                 justify-content: space-between;
                 position: relative;
                 font-family: 'Roboto';
                 font-weight: bolder;
-                @media screen and (min-width:500px) {
-                    min-width: 60vw;
-                    font-size: 5vmin;
-                    margin-right: 100px;
+                @media (min-width:220px) {
+                   
+                    width:15rem;
                 }
+                @media (max-width:261px) {
+                    font-size: 10px;
+                    width: 9rem;
+                }
+              
+                
+                @media (min-width:262px) and (max-width:374px){
+                    font-size: 10px;
+                }
+                @media screen and (min-width:375px) {
+                    width: 20.6rem;
+                    
+                }
+                @media screen and (min-width:384px) {
+                    width: 15rem;
+                    
+                }
+                
+                @media screen and (min-width:768px) {
+                    width: 24vmax;
+                    font-size: 2vmin;
+                    
+                }
+               
+                @media screen and (min-width:2500px) {
+                    min-width: 20vmax;
+                    font-size: 2vmin;
+                    
+                    
+                }
+               
                 
                 
 
                 /*icone smartphone...*/
                 i{
                 color: #999999;
+                font-size: 2vmax;
                 margin-right: 2px;
+                @media screen and (min-width:768px) {
+                    font-size: 2vmin;
+                    display: flex;
+                    align-items: center;
+                    
+                    
+                }
+                @media screen and (min-width:1235px) {
+                    font-size: 1.5vmax;
+                    display: flex;
+                    align-items: center;
+                    
+                    
+                }
+                @media screen and (min-width:2560px) {
+                    font-size: 1.5vmax;
+                    
+                    
+                }
                 &:hover{
                 color: $primary_color;
+                
                 } }
                         
                 p{
@@ -198,44 +347,124 @@ body{
                 font-weight: bolder;
                 margin-right: 10px;
             
-                @media screen and (min-width:500px) {
-                    margin-left: 70px;
-                }
+                
                 }
                 }
                 }
                 }
             }
         }
+        .filtre{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @media (min-width:244px) and (max-width:373px) {
+               width: 7vmin;
+
+                
+                
+                
+            }
+            @media screen and (min-width:2500px) {
+                width: 3vmax;
+                
+                
+                
+            }
+           span{
+            
+            @media screen and (min-width:1235px) {
+         
+                
+                font-size: 1.5vmax;
+                
+                
+            }
+            @media screen and (min-width:2500px) {
+         
+                
+                font-size: 2vmax;
+  
+            }
+           }
+        }
     }
 
-    /*restaurant*/
+    /*---------------------------------------------------restaurant*/
     @include resto;
+    .group_restaurant{
+        background-color: rgb(245, 241, 241);
+        margin-top: 15%;
+        @media screen and (min-width:1000px) {
 
+            background-color: white;
+        }
+    }
     main.accueil{
-        /*cartes*/
+        
+        display: flex;
+        justify-content: center;
+
+        
+        /*----------------------------------------------cartes*/
         .cards{
-            
-            width: 100%;
+            margin-bottom: 12%;
             background-color: transparent;
+            @media screen and (max-width:100px){
+                width: 150px;
+            } 
+            
+            @media screen and (min-width:768px) {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                flex: 1;
+                }
+            @media screen and (min-width:2560px) {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                margin: 50px;
+                flex: 1;
+                width: 200px;
+
+                }
+                
+
+           
             div.card {
             transform: scale(1);
                position: relative;
                padding-bottom: 10px;
-               height: 210px;
-               width: 80%;
-               min-width: 300px;
-               max-width: 2000px;
-               min-height: 90px;
-               max-height: 3000px ;
+               width: 100%;
+               background-color: white;
+               min-height: 110px;
+               
+               flex: 1;
                /* Add shadows to create the "card" effect */
                box-shadow: 0 4px 5px 0 rgba(0,0,0,0.2);
                transition: 0.3s;
                border-radius: $border-radius;
-               margin:10% auto;
-               @media screen and (min-width:500px) {
-               min-height: 800px;
-               }
+               margin-bottom: 5%;
+               @media screen and (max-width:100px){
+                width: 150px;
+            } 
+               @media screen and (min-width:768px) {
+                    margin:10px;   
+                    height: 900px;
+                    
+                }
+               @media screen and (min-width:2500px) {
+                    width: 4000px;
+                    padding-bottom: 100px;
+                }
+               @media screen and (min-width:5000px) {
+                   height: 2000px;
+                  
+                }
               
                &:hover{
                    box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2);
@@ -250,9 +479,21 @@ body{
                   height: 160px;
                   object-fit: cover;
                   width: 100%;
-                  max-width: 3000px;
                   min-height: 70%;
                   max-height: 8000px;
+                  @media (min-width: 375px) and (max-width: 414px){
+                    min-width: 340px;
+                }
+                  @media screen and (min-width:2500px) {
+                    min-width: 590px;
+                    max-height: 10000px;
+                }
+                  @media screen and (min-width:5000px) {
+                    min-width: 590px;
+                    min-height: 1000px;
+                    
+                }
+         
                   
                 }
 
@@ -289,7 +530,7 @@ body{
                 p{
                     margin: 0px 0px 0px 10px;
                     width: 100%;
-                    font-size: 1.5vmax;
+                    font-size: 2vmax;
                     font-family: 'Roboto';
                     font-weight: 500;
                    
@@ -326,7 +567,7 @@ body{
                     transition: color 2s ease-out;
                 }
                 .fa-heart:hover::before{
-                    color: rgb(0, 183, 255);
+                    color: #9356DC ;
                     cursor: pointer;
                     font-weight: bold;
                 }
@@ -353,39 +594,78 @@ body{
 
    header{
     background-color: transparent;   
-    /*image header*/
+    /*----------------------------------image header*/
     div.image img{
     height: 200px;
-    width: 102%;
+    width: 100%;
+    object-fit: cover;
     @media screen and (min-width:500px){
-    height:50%;
+    height:500px;
    
     }
    }
 
 }   
 
-   /*main des pages menus*/
+   /*-------------------------------------------------main des pages menus*/
    .main{
-   border-top-left-radius: $border-radius;
-   border-top-right-radius: $border-radius;
-   background-color: $background_color_container1;
-   display: flex;
-   flex-direction: column;
-   min-width: 100%;
-   position: relative;
-   bottom: 50px;
-   @media screen and (min-width:700px){
+     margin-top: -4rem;
+     border-top-left-radius: $border-radius;
+     border-top-right-radius: $border-radius;
+     background-color: $background_color_container1;
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+    
+     position: relative;
+     @media screen and (min-width:700px){
        display: flex;
        justify-content: center;
        align-items: center; 
-   }
-   
-    /*titre des menus*/
-    @include h1;
-  
-    /*titre :entrées, plats, dessert*/
-    h2{
+     
+     }
+
+     .position_menus{
+        margin-bottom: 10%;
+       
+        @media screen and (min-width:707px){
+            width: 42rem;
+        }
+        @media screen and (min-width:741px){
+            width: 44rem;
+        }
+        @media screen and (min-width:960px){
+            width: 55rem;
+        }
+        @media screen and (min-width:1107px){
+            width: 60vmax;
+        }
+        @media screen and (min-width:1194px){
+            width: 74rem;
+        }
+        @media screen and (min-width:1283px){
+            width: 90vmax;
+            display: flex;
+            flex-direction: row;
+            
+           
+        }
+        @media screen and (min-width:1440px){
+            width: 100vmax;
+            display: flex;
+            flex-direction: row;
+            
+           
+        }
+       
+       
+       
+     }
+    /*--------------------------------------titre des menus*/
+    @include h3;
+
+    /*------------------------------titre :entrées, plats, dessert*/
+    h3{
      border-bottom: solid 2px $tertiary_color;
      width: 10%;
      max-width: 15%;
@@ -398,12 +678,322 @@ body{
      border-bottom: solid 2px $tertiary_color;
     }
     }
-
+    /*--------------------------------------------------les menus*/
+  .container_menu{
+    animation:slidedown 5s ;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: none;
+    padding:  6px 0px 0px 10px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: -1px 2px 10px #0000002e;
+    position: relative;
+    overflow: hidden;
+    @media screen and (max-width:157px){
+        width: 7.2rem;
+    }
   
-    /*bouton commander*/
+    @media (min-width: 324px) and (max-width: 323px){
+        width: 25vmax;
+    }
+    @media (min-width: 324px) and (max-width: 5px){
+        width: 90vmin;
+    }
+    @media (min-width: 598px) and (max-width: 626px){
+        width: 90vmin;
+    }
+    @media (min-width: 627px) and (max-width: 720px){
+        width: 80vmax;
+    }
+ 
+    @media (min-width: 820px) and (max-width: 1194px){
+        width: 60vmax;
+    }
+    @media (min-width: 1195px) and (max-width: 1283px){
+        width: 80vmax;
+    }
+    @media screen and (min-width:1284px){
+        width: 28vmax;
+    }
+   
+   
+    
+   
+    
+ 
+    }
+    .nom_plat{
+        width: 80%;
+        
+    }
+    
+    /*--------------------------------------------------au survol*/
+    .container_menu:hover .check {
+    opacity: 1;
+    transform: translate(-96px);
+    }
+    /*au survol*/
+    .container_menu:hover .nom_plat {
+
+        @media screen and (max-width:246px){
+            width: 2px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        @media screen and (min-width:2500px){
+           
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+  
+    .container_menu:hover .fa-check-circle {
+    transform: rotate(360deg) ;
+    transition: transform 600ms ease-in-out;      
+    }
+   
+
+    /*-------------------------------------------------------prix*/
+    .prix{
+        font-size: 10px;
+        @media screen and (max-width:205px){
+            font-size: 1.3vmax;
+        }
+        @media screen and (min-width:319px){
+            font-size: 1.9vmax;
+        }
+        @media screen and (min-width:375px){
+            font-size: 1.6vmax;
+        }
+        @media screen and (min-width:427px){
+            font-size: 1.5vmax;
+        }
+        @media screen and (min-width:768px){
+            font-size: 1.9vmax;
+        }
+        
+        
+        @media screen and (min-width:1283px){
+            font-size: 1.3vmax;
+        }
+    }
+    .container_menu:hover .prix {
+        transform: translate(-56px);
+        @media screen and (max-width:157px){
+            transform: translate(-50px);
+        }
+        @media (min-width: 157px) and (max-width: 498px){
+            transform: translate(-3.5rem);
+        }
+        @media (min-width: 499px) and (max-width: 511px){
+            transform: translate(-6rem);
+        }
+        @media (min-width: 512px) and (max-width: 757px){
+            transform: translate(-9vmax);
+        }
+        @media screen and (min-width:758px){
+            transform: translate(-10vmax);
+        }
+        @media screen and (min-width:768px){
+            transform: translate(-10vmax);
+        }
+        @media screen and (min-width:800px){
+            font-size:1.9vmax;
+        }
+        @media screen and (min-width:1027px){
+            font-size:1vmax;
+        }
+        @media screen and (min-width:1440px){
+            font-size: 1.2vmax;
+        }
+      
+        
+    }
+    p {
+        font-size: 3vmin;
+        /* Nécessaires pour text-overflow */
+        white-space: nowrap;
+        overflow: hidden;
+        @media screen and (max-width:189px){
+            font-size: 4vmin;
+        }
+        @media screen and (min-width:1440px){
+            font-size: 2.1vmin;
+        }
+    }
+    /*----------------------------------------nom entrée plat dessert*/
+    h4.menu{
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0px;
+    font-family: 'Roboto';
+    font-size: 4vmin;
+    min-width: 190px;
+    @media  screen and (max-width:279px) {
+     
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 1px;
+    }
+    @media  screen and (min-width:279px) {
+        min-width: 200px;
+        
+    }
+    @media  screen and (min-width:476px) {
+        min-width: 200px;
+    }
+    @media screen and (min-width:1194px){
+        min-width: 22rem;
+        font-size: 2.5vmin;
+    }
+   
+    @media screen and (min-width:1283px){
+        min-width: 22rem;
+        font-size: 1.5vmin;
+    }
+    @media screen and (min-width:1440px){
+        min-width: 22rem;
+        font-size: 1.1vmax;
+    }
+   
+    }
+    .container_menu:hover h4.menu {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 3px;
+        @media screen and (max-width:157px){
+            min-width: 50px;
+            text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        @media screen and (min-width:1283px){
+            min-width: 15vmax;
+            text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+    }
+    .description_prix{
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    font-family: 'Roboto';
+    width: 100%;
+    margin-right: 2%;
+    @media  screen and (max-width:268px) {
+        margin-right: 6%;
+    }
+    @media  screen and (min-width:1440px) {
+        width: 20%;
+        
+    }
+
+    }
+
+    /*--------------------------------détail entrée plat dessert*/
+    .overflow-ellipsis{
+  
+   
+    @media screen and (max-width:205px){
+        font-size: 1.3vmax;
+    }
+    
+    @media  (min-width:320px) and (max-width: 374px){
+        font-size: 1.9vmax;
+    }
+    @media (min-width: 375px) and (max-width: 424px){
+        font-size: 1.6vmax;
+    }
+    
+    @media screen and (min-width:427px){
+        font-size: 1.9vmax;
+    }
+    @media screen and (min-width:1283px){
+        font-size: 1.0vmax;
+    }
+    @media screen and (min-width:1440px){
+        font-size: 1.2vmax;
+        text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    }
+    .container_menu:hover .overflow-ellipsis {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        @media screen and (max-width:157px){
+            width: 50px;
+            text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        @media screen and (min-width:157px){
+            width: 40vmin;
+            text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        @media screen and (min-width:1288px){
+            width: 15vmax;
+            font-size: 1.2vmax;
+            text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        @media screen and (min-width:1317px){
+            width: 15vmax;
+            font-size: 1.2vmax;
+            text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        @media screen and (min-width:1440px){
+            width: 15vmax;
+            font-size: 1.2vmax;
+            text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        
+    }
+
+    /*------------------------------------------fond vert animation*/
+    .check{
+        position:absolute;
+        top:-0.3px;
+        right:-96px;
+        background-color: #99E2D0;
+        color: white;
+        min-width: 50px;
+        height: 100%;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        display:flex;
+        justify-content:center;
+        padding-top:1.4px;
+        align-items: center;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        /*icône*/
+        i{
+            font-size: 4vmin;
+            @media screen and (min-width:1440px){
+                width: 2vmin;
+               
+                
+               
+            }
+            
+        }
+       
+        @media  screen and (min-width:500px) {
+            min-width: 9vmax;
+        }
+       
+
+    
+}
+}
+  
+    /*-----------------------------------------------bouton commander*/
     @include Commander;
    
-}
 
 
 
@@ -411,17 +1001,62 @@ body{
 footer
 _______________________________________*/
 
- /*pied de page*/
+ ul{
+    padding-left: 4%;
+ }
  @include footer;
 li{
-    width: 150%;
+    width: 100%;
     list-style: none;
-    
+
     a{
     color: $link_visited;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
     font-size: 2vmax;
-    }   
-}}
+   
+   
+     h4{
+        font-family: 'Roboto';
+        font-weight: 10;
+        margin: 2px;
+
+        @media screen and (max-width:320px){
+            font-size: 1vmax;
+            width: 70vmin;
+           }
+        @media screen and (min-width:375px){
+            font-size: 3vmax;
+            width: 100vmin;
+           }
+        @media screen and (min-width:952px){
+            width: 50vmax;
+           }
+        @media screen and (min-width:2500px){
+            margin-bottom: 3rem;
+           }
+        @media screen and (min-width:5000px){
+            margin: 8rem;
+           }
+     }
+     #i_footer{
+         padding-right: 0.6rem;
+   
+        
+         @media screen and (min-width:2500px){
+            padding-right: 3rem;
+           }
+     }
+    } 
+    #logo_footer{
+        font-family:"Shrikhand" ;
+        font-size: 2vmax;
+        @media screen and (min-width:375px){
+            font-size: 3vmax;
+            width: 100vmin;
+           }
+        
+    }  
+}
+

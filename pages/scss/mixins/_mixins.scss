@@ -139,26 +139,21 @@ ______________________________________________*/
     .form label,.form button{
     align-items: center;
     display: flex;
-    min-width: 97%;
+    width: 100%;
     cursor: pointer;
     padding: 5px;
-    @media screen and (min-width:500px) {
-        min-width: 98%;  
-    }
-    @media screen and (min-width:700px) {
-        min-width: 100%;  
-        }
+   
     }
        
     /*icône localistion*/
     label {
-        height: 5vmax;
+        height: 8vmax;
        
-    background-color:$background_color;
-    display: flex;
-    justify-content: center;
-    @media screen and(min-width:476px) {
-        height: 8vmax; 
+        background: rgb(74,74,74);
+        background: linear-gradient(180deg, rgb(161, 161, 161) 0%, rgba(223, 223, 223, 0.841) 10%);
+        display: flex;
+        justify-content: center;
+        
     
      }
     span{
@@ -180,22 +175,19 @@ ______________________________________________*/
         
         display: flex;
         align-items: center;
-    border: 0;
-    @media screen and(min-width:476px) {
-       height: 6.5vmax; 
-       width: 50vmax;
-    }
-    flex: 1;
-   
-    background-color:$background_color;
-
-    min-width: 100%;
-    @media screen and (min-width:500px) {
-    min-height: 1.8rem;
-    min-width: 200px; 
-    display: flex; 
-    align-content: center;
-    }
+        border: 0;
+        background-color: transparent;
+        height: 8vmax;
+        flex: 1;
+        width: 29vmax;
+        @media screen and(max-width:321px) {
+            width: 19vmax;
+            
+        }
+        @media screen and(min-width:2560px) {
+            width: 19vmax;
+            
+        }
     }
        
     /* Exemple de ville*/
@@ -206,8 +198,12 @@ ______________________________________________*/
     font-family: 'Roboto';
     font-weight: 600;
     font-size: 4vmin;
+    @media screen and(min-width:2560px) {
+        font-size: 2vmax;
+        
     }
 }
+    
 
 
 /*_______________________________

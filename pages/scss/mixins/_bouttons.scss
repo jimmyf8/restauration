@@ -8,16 +8,25 @@ ___________________________________*/
 
 /*boutton explorer*/
 @mixin Commander{
+    .boutons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20%;
+        
+    }
     button.Commander{
-    font-size: 2vmax;
-    margin:50px 50px 100px 80px;
-    min-width: 50%;
-    background: $background_explorer_mobile;
-    border: none;
-    border-radius: $border-radius;
-    padding: 16px;   
-    color: $link_visited;
-    cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vmax;
+        min-width: 50%;
+        padding: 16px;   
+        background: $background_explorer_mobile;
+        border: none;
+        border-radius: $border-radius;
+        color: $link_visited;
+        cursor: pointer;
     
     &:hover{
         background: lighten($color: #30103a, $amount: 50);
@@ -55,287 +64,26 @@ ___________________________________*/
     border: none;
     background: $background_explorer_mobile;
     border-radius: $border-radius;
-    padding:  10px 10px 10px 10px;   
+    padding:  10px 10px 10px 10px;
+    margin: 0rem  0rem  5rem 0rem;   
     color: $link_visited;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    @media screen and (max-width:100px){
+        width: 100%;
+    } 
+    @media screen and (min-width:1000px){
+        font-size: 1.5vmax;
+    }
     &:hover{
     background: lighten($color: #30103a, $amount: 50);
     box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2);
     }
-    @media screen and (min-width:500px){
-    margin-bottom: 0.1%;
-    }
-}
+    
 
 
 /*_________________________________
 Bouttons menus
 ___________________________________*/
 
-
-  /*bouton des menus*/
-  .container_menu{
-    animation:slidedown 5s ;
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    border: none;
-    padding:  6px 0px 0px 10px;
-    font-size: 3vmax;
-    border-radius: 15px;
-    box-shadow: -1px 2px 10px #0000002e;
-    margin: 10px;
-    margin-bottom: 10px;
-    position: relative;
-    overflow: hidden;
-    @media screen and (min-width:700px){
-        display: flex;
-        justify-content: space-between;
-        width:68vmax;
-        margin: 5%;
-        
-    }
-    }
-    
-    /*au survol*/
-    .container_menu:hover .check {
-    opacity: 1;
-    transform: translate(-96px);
-  
-    }
-    
-    .container_menu:hover .fa-check-circle {
-    transform: rotate(360deg) ;
-    transition: transform 600ms ease-in-out;      
-    }
-    .container_menu:hover .prix{
-    position: absolute;
-    left:  0;
-    margin-left: 39vmax;
-    @media screen and (min-width:280px){
-        margin-left: 24vmax;
-    }
-    @media screen and (min-width:290px){
-        margin-left: 30vmax;
-    }
-    @media screen and (min-width:300px){
-        margin-left: 30vmax;
-    }
-   
-    @media screen and (min-width:320px){
-        margin-left: 35vmax;
-    }
-    @media screen and (min-width:352px){
-        margin-left: 41vmax;
-    }
-    @media screen and (min-width:359px) {
-        margin-left: 34vmax;
-    }
-
-    @media screen and (min-width:370px){
-        margin-left: 36vmax;
-    }
-    @media screen and (min-width:375px){
-        margin-left: 30vmax;
-    }
-   
-    @media screen and (min-width:380px){
-        margin-left: 46vmax;
-    }
-    @media screen and (min-width:410px){
-        margin-left: 33vmax;
-    }
-   
-    @media screen and (min-width:507px){
-        margin-left: 60vmax;
-    }
-    @media screen and (min-width:540px){
-        margin-left: 45vmax;
-    }
-    @media screen and (min-width:700px){
-        margin-left: 50vmax;
-    }
-    @media screen and (min-width:767px){
-        margin-left: 50vmax;
-    }
-    }
-
-    .container_menu:hover .overflow-ellipsis {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    min-width: 36vmax;
-    @media screen and (min-width:280px){
-        min-width: 23vmax;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    @media screen and (min-width:290px){
-        min-width: 25vmax;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    @media screen and (min-width:299px){
-        min-width: 30vmax;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-  
-   
-   
-   
-   
-    }
-
-    .container_menu:hover h4.menu {
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        width: 35px;
-        @media screen and (min-width:280px){
-            min-width: 23vmax;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-        @media screen and (min-width:476px) {
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            width: 280px;
-        }
-    }
-
-    .container_menu:hover .description_prix{
-        width: 10px;
-      
-    }
-
-    
-
-    p {
-        font-size: 4.3vmin;
-        /* Nécessaires pour text-overflow */
-        white-space: nowrap;
-        overflow: hidden;
-    }
-
-    /*prix*/
-    .prix{
-    margin-left: 1vmax;
-    @media screen and (min-width:279px){
-        margin-left: 30px;
-    }
-    @media screen and (min-width:290px){
-        margin-right: 1vmax;
-    }
-   
-    @media screen and (min-width:359px) {
-        margin-right: 50px;
-    }
-    @media screen and (min-width:370px){
-        margin-left: 9vmax;
-    }
-    @media screen and (min-width:428px) {
-        margin-left: 80px;
-    }
-    @media screen and (min-width:507px){
-        margin-left: 35vmax;
-    }
-    @media screen and (min-width:700px){
-        margin-left: 10vmax;
-    }
-    @media screen and (min-width:767px){
-        margin-left: 15vmax;
-    }
-    }
-
-    /*nom entrée plat dessert*/
-    h4.menu{
-    
-    white-space: nowrap;
-    overflow: hidden;
-    margin: 0px;
-    font-family: 'Roboto';
-    min-width: 190px;
-    @media  screen and (min-width:279px) {
-        min-width: 200px;
-        
-    }
-    @media  screen and (min-width:476px) {
-        min-width: 200px;
-    }
-   
-    }
-    
-    .description_prix{
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Roboto';
-    width: 80%;
-    max-width:87%;
-    position: relative;
-   
-    @media  screen and (min-width:476px) {
-        max-width: 650px;
-    }
-    }
-
-    /*détail entrée plat dessert*/
-    .overflow-ellipsis{
-    min-width:43.5vmax;
-    @media screen and (min-width:279px){
-        min-width: 20vmax;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    
-    @media screen and (min-width:290px){
-        min-width: 30vmax;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    @media screen and (min-width:299px){
-        min-width: 35vmax;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    @media  screen and (min-width:320px) {
-        min-width: 35vmax;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    @media screen and (min-width:375px){
-        min-width: 25vmax;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    
-    
-    }
-
-    /*fond vert animation*/
-    .check{
-        position:absolute;
-        top:-0.3px;
-        right:-96px;
-        background-color: #99E2D0;
-        color: white;
-        min-width: 50px;
-        height: 100%;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        display:flex;
-        justify-content:center;
-        padding-top:1.4px;
-        align-items: center;
-        opacity: 0;
-        transition: all .3s ease-in-out;
-        /*icône*/
-        i{
-            font-size: 4vmax;
-        }
-        @media  screen and (min-width:500px) {
-            min-width: 9vmax;
-        }
-
-    
 }
-
     
